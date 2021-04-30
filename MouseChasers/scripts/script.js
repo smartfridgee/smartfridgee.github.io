@@ -157,6 +157,7 @@ function system(){
 			if(level > best){
 				best = level;
 				rekord.innerHTML = best;
+				Cookies.set("best", best);
 			}
 			
 			level += 1;
@@ -223,6 +224,7 @@ function pause(){
 						if(level > best){
 							best = level;
 							rekord.innerHTML = best;
+							Cookies.set("best", best);
 						}
 						
 						level += 1;
@@ -239,4 +241,9 @@ function pause(){
 			}
 		}, 1000);
 	}
+}
+
+//cookies
+window.onload = function(){
+	best = parseInt(Cookies.get("best"));
 }
