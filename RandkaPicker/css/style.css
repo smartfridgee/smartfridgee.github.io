@@ -1,0 +1,48 @@
+/*BrowserThings*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-family: 'Calibri', sans-serif;
+	font-size: 2vh;
+}
+
+body{
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+/*MainMenu*/
+#mainMenu{
+	position: absolute;
+	max-width: 60vh;
+	height: 70%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10vh;
+	background-color: dodgerblue;
+}
+
+.mainMenuTitle{
+	height: 15%;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: orange;
+	font-size: 5vh;
+}
+
+.mainMenuForm{
+	height: 85%;
+}
+
+.mainMenuFormOption{
+	margin-top: 3vh;
+	height: 10%;
+	text-align: center;
+}
