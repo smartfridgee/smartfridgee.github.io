@@ -16,33 +16,59 @@ body{
 	overflow: hidden;
 }
 
-/*MainMenu*/
+.mainHeader{
+	position: relative;
+	height: 12vh;
+	width: 100%;
+	padding-left: 1vh;
+	background-color: black;
+	color: transparent;
+	-webkit-text-stroke: 0.1vh white;
+	font-family: 'Unica One', cursive;
+	font-size: 10vh;
+	font-variant: small-caps;
+}
+
 #mainMenu{
-	position: absolute;
-	max-width: 60vh;
-	height: 70%;
-	left: 0;
-	right: 0;
+	position: relative;
+	max-width: 80vh;
+	height: 82vh;
+	box-sizing: border-box;
+	background-color: rgba(30, 144, 255, 0.6);
+	backdrop-filter: blur(1.2vh);
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10vh;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.mainFooter{
+	position: relative;
+	height: 6vh;
+	width: 100%;
+	background-color: black;
+}
+
+#backgroundOne{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url("../images/backgrounds/background1.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+#loadingScreen{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
 	background-color: dodgerblue;
+	z-index: 99;
 }
 
-.mainMenuTitle{
-	height: 15%;
-	text-align: center;
-	box-sizing: border-box;
-	background-color: orange;
-	font-size: 5vh;
-}
-
-.mainMenuForm{
-	height: 85%;
-}
-
-.mainMenuFormOption{
-	margin-top: 3vh;
-	height: 10%;
-	text-align: center;
+#loadingScreen.off{
+	left: 100%;
+	transition: 1s;
 }
