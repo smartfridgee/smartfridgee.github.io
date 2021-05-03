@@ -8,6 +8,7 @@
 html{
 	font-family: 'Calibri', sans-serif;
 	font-size: 2vh;
+	user-select: none;
 }
 
 body{
@@ -45,6 +46,78 @@ body{
 	text-align: center;
 }
 
+.mainMenuTitle{
+	height: 10%;
+	font-size: 6vh;
+}
+
+.mainMenuForm{
+	height: 80%;
+}
+
+.formOptionL{
+	height: 18%;
+	margin-bottom: 1vh;
+	margin-left: 13vh;
+	margin-right: 13vh;
+	background-color: yellow;
+	box-sizing: border-box;
+	transition: 1s;
+}
+
+.formOptionL .image{
+	width: 22%;
+	height: 100%;
+	background-color: blue;
+	background-position: center;
+	background-size: cover;
+	float: left;
+}
+
+.formOptionL .rest{
+	width: 78%;
+	height: 100%;
+	background-color: orange;
+	float: right;
+}
+
+.formOptionR{
+	height: 18%;
+	margin-bottom: 1vh;
+	margin-left: 13vh;
+	margin-right: 13vh;
+	background-color: blue;
+	box-sizing: border-box;
+	transition: 1s;
+}
+
+.formOptionR .image{
+	width: 22%;
+	height: 100%;
+	background-color: blue;
+	background-position: center;
+	background-size: cover;
+	float: right;
+}
+
+.formOptionR .rest{
+	width: 78%;
+	height: 100%;
+	background-color: orange;
+	float: left;
+}
+
+.rest .title{
+	height: 50%;
+	width: 100%;
+}
+
+.rest .option{
+	height: 50%;
+	width: 50%;
+	float: left;
+}
+
 .mainFooter{
 	position: relative;
 	height: 6vh;
@@ -55,7 +128,42 @@ body{
 	font-variant: small-caps;
 	background-color: black;
 	text-align: center;
-	
+}
+
+.formButton{
+	height: 10%;
+	padding-top: 1.5vh;
+}
+
+#button{
+	border-radius: 10px;
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 1.5vh;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-family: 'Poppins', sans-serif;
+	font-size: 2vh;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#button:hover{
+	background-color: #3b833e;
+	color: white;
+	transition: 0.5s;
+}
+
+#button:active{
+	background-color: #2f6a31;
+	color: white;
+	transition: 0.2s;
+}
+
+#button:focus{
+	outline: none;
 }
 
 #backgroundOne{
@@ -98,9 +206,49 @@ body{
 	right: 85%;
 }
 
+
+
+
+
+
+
+
 @media only screen and (max-width: 80vh) {
-  #mainMenu{
-    background-color: #1f2124;
-  }
+	#mainMenu{
+		background-color: #1f2124;
+	}
+  
+  .formOptionL{
+		margin-left: 10vh;
+		margin-right: 10vh;
+	}
+
+	.formOptionR{
+		margin-left: 10vh;
+		margin-right: 10vh;
+	}
+  
+}
+
+@media only screen and (max-width: 970px) {  
+  .formOptionL{
+		margin-left: 5vh;
+		margin-right: 5vh;
+	}
+	.formOptionR{
+		margin-left: 5vh;
+		margin-right: 5vh;
+	}
+}
+
+@media only screen and (max-width: 900px) {  
+  .formOptionL{
+		margin-left: 2vh;
+		margin-right: 2vh;
+	}
+	.formOptionR{
+		margin-left: 2vh;
+		margin-right: 2vh;
+	}
 }
 
