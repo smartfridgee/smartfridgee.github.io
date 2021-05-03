@@ -72,7 +72,7 @@ body{
 	height: 100%;
 	width: 100%;
 	left: 0;
-	background-color: dodgerblue;
+	background-color: #1f2124;
 	z-index: 99;
 }
 
@@ -96,5 +96,11 @@ body{
 
 #loadingShark.off{
 	right: 85%;
+}
+
+@media only screen and (max-width: 80vh) {
+  #mainMenu{
+    background-color: #1f2124;
+  }
 }
 
