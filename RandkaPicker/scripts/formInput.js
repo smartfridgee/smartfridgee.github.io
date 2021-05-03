@@ -1,11 +1,16 @@
 //ONE
 const formInputOne = document.getElementById("inputOne").getElementsByClassName("option");
 
+const textShadow = "0px 0px 5px #466f94"
+const fontWeight = "bold";
+
 function formInputValueOne(event){
 	for(i = 0; i < 2; i++){
+		formInputOne[i].style.textShadow = "";
 		formInputOne[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.fontWeight = "bold";
+	event.currentTarget.style.textShadow = textShadow;
+	event.currentTarget.style.fontWeight = fontWeight;
 	formOutputOne = event.currentTarget.innerHTML;
 }
 
@@ -18,9 +23,11 @@ const formInputTwo = document.getElementById("inputTwo").getElementsByClassName(
 
 function formInputValueTwo(event){
 	for(i = 0; i < 2; i++){
+		formInputTwo[i].style.textShadow = "";
 		formInputTwo[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.fontWeight = "bold";
+	event.currentTarget.style.textShadow = textShadow;
+	event.currentTarget.style.fontWeight = fontWeight;
 	formOutputTwo = event.currentTarget.innerHTML;
 }
 
@@ -33,9 +40,11 @@ const formInputThree = document.getElementById("inputThree").getElementsByClassN
 
 function formInputValueThree(event){
 	for(i = 0; i < 2; i++){
+		formInputThree[i].style.textShadow = "";
 		formInputThree[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.fontWeight = "bold";
+	event.currentTarget.style.textShadow = textShadow;
+	event.currentTarget.style.fontWeight = fontWeight;
 	formOutputThree = event.currentTarget.innerHTML;
 }
 
@@ -48,9 +57,11 @@ const formInputFour = document.getElementById("inputFour").getElementsByClassNam
 
 function formInputValueFour(event){
 	for(i = 0; i < 2; i++){
+		formInputFour[i].style.textShadow = "";
 		formInputFour[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.fontWeight = "bold";
+	event.currentTarget.style.textShadow = textShadow;
+	event.currentTarget.style.fontWeight = fontWeight;
 	formOutputFour = event.currentTarget.innerHTML;
 }
 
@@ -63,9 +74,11 @@ const formInputFive = document.getElementById("inputFive").getElementsByClassNam
 
 function formInputValueFive(event){
 	for(i = 0; i < 2; i++){
+		formInputFive[i].style.textShadow = "";
 		formInputFive[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.fontWeight = "bold";
+	event.currentTarget.style.textShadow = textShadow;
+	event.currentTarget.style.fontWeight = fontWeight;
 	formOutputFive = event.currentTarget.innerHTML;
 }
 
