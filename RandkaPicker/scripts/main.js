@@ -1,4 +1,4 @@
-//loadingScreen
+//loadingScreenSTART
 const loadingScreen = setTimeout(function(){
 	overlay = document.getElementById("loadingScreen");
 	shark = document.getElementById("loadingShark");
@@ -8,4 +8,12 @@ const loadingScreen = setTimeout(function(){
 		overlay.remove();
 	}, 1000)
 }, 500)
+//loadingScreenEND
 
+//formOutputValuesSTART
+let formOutputOne;
+let formOutputTwo;
+let formOutputThree;
+let formOutputFour;
+let formOutputFive;
+//formOutputValuesEND

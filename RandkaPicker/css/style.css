@@ -116,6 +116,7 @@ body{
 	height: 50%;
 	width: 50%;
 	float: left;
+	transition: 0.1s;
 }
 
 .mainFooter{
@@ -135,7 +136,7 @@ body{
 	padding-top: 1.5vh;
 }
 
-#button{
+.button{
 	border-radius: 10px;
 	background-color: #4CAF50;
 	border: none;
@@ -150,19 +151,19 @@ body{
 	transition: 0.5s;
 }
 
-#button:hover{
+.button:hover{
 	background-color: #3b833e;
 	color: white;
 	transition: 0.5s;
 }
 
-#button:active{
+.button:active{
 	background-color: #2f6a31;
 	color: white;
 	transition: 0.2s;
 }
 
-#button:focus{
+.button:focus{
 	outline: none;
 }
 
@@ -230,7 +231,7 @@ body{
   
 }
 
-@media only screen and (max-width: 970px) {  
+@media only screen and (max-width: 73vh) {  
   .formOptionL{
 		margin-left: 5vh;
 		margin-right: 5vh;
@@ -241,7 +242,7 @@ body{
 	}
 }
 
-@media only screen and (max-width: 900px) {  
+@media only screen and (max-width: 67vh) {  
   .formOptionL{
 		margin-left: 2vh;
 		margin-right: 2vh;
