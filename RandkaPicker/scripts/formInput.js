@@ -3,9 +3,9 @@ const formInputOne = document.getElementById("inputOne").getElementsByClassName(
 
 function formInputValueOne(event){
 	for(i = 0; i < 2; i++){
-		formInputOne[i].style.backgroundColor = "";
+		formInputOne[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.backgroundColor = "white";
+	event.currentTarget.style.fontWeight = "bold";
 	formOutputOne = event.currentTarget.innerHTML;
 }
 
@@ -18,9 +18,9 @@ const formInputTwo = document.getElementById("inputTwo").getElementsByClassName(
 
 function formInputValueTwo(event){
 	for(i = 0; i < 2; i++){
-		formInputTwo[i].style.backgroundColor = "";
+		formInputTwo[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.backgroundColor = "white";
+	event.currentTarget.style.fontWeight = "bold";
 	formOutputTwo = event.currentTarget.innerHTML;
 }
 
@@ -33,9 +33,9 @@ const formInputThree = document.getElementById("inputThree").getElementsByClassN
 
 function formInputValueThree(event){
 	for(i = 0; i < 2; i++){
-		formInputThree[i].style.backgroundColor = "";
+		formInputThree[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.backgroundColor = "white";
+	event.currentTarget.style.fontWeight = "bold";
 	formOutputThree = event.currentTarget.innerHTML;
 }
 
@@ -48,9 +48,9 @@ const formInputFour = document.getElementById("inputFour").getElementsByClassNam
 
 function formInputValueFour(event){
 	for(i = 0; i < 2; i++){
-		formInputFour[i].style.backgroundColor = "";
+		formInputFour[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.backgroundColor = "white";
+	event.currentTarget.style.fontWeight = "bold";
 	formOutputFour = event.currentTarget.innerHTML;
 }
 
@@ -63,9 +63,9 @@ const formInputFive = document.getElementById("inputFive").getElementsByClassNam
 
 function formInputValueFive(event){
 	for(i = 0; i < 2; i++){
-		formInputFive[i].style.backgroundColor = "";
+		formInputFive[i].style.fontWeight = "";
 	}
-	event.currentTarget.style.backgroundColor = "white";
+	event.currentTarget.style.fontWeight = "bold";
 	formOutputFive = event.currentTarget.innerHTML;
 }
 
