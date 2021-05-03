@@ -63,11 +63,9 @@ body{
 	margin-bottom: 1vh;
 	margin-left: 10vh;
 	margin-right: 20vh;
-	background-color: rgba(49, 65, 94, 0.5);
+	background-color: rgba(48, 56, 72, 0.7);
 	box-sizing: border-box;
 	transition: 1s;
-	backdrop-filter: blur(1vh);
-	-webkit-backdrop-filter: blur(1vh);
 }
 
 .formOptionR{
@@ -75,11 +73,9 @@ body{
 	margin-bottom: 1vh;
 	margin-left: 20vh;
 	margin-right: 10vh;
-	background-color: rgba(58, 76, 110, 0.5);
+	background-color: rgba(52, 62, 81, 0.7);
 	box-sizing: border-box;
 	transition: 1s;
-	backdrop-filter: blur(1vh);
-	-webkit-backdrop-filter: blur(1vh);
 }
 
 .formOptionL .image{
@@ -199,7 +195,7 @@ body{
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-image: url("../images/backgrounds/background1.jpg");
+	background-image: url("../images/backgrounds/sunset.jpg");
 	background-position: center;
 	background-size: cover;
 }
