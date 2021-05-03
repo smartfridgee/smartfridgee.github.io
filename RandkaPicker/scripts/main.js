@@ -10,6 +10,13 @@ const loadingScreen = setTimeout(function(){
 }, 500)
 //loadingScreenEND
 
+//backgroundChangeSTART
+const backgroundChange = setInterval(function(){
+	background = document.getElementById("background")
+	background.classList.toggle("sunset");
+}, 7000)
+//backgroundChangeEND
+
 //formOutputValuesSTART
 let formOutputOne;
 let formOutputTwo;

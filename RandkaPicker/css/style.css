@@ -131,6 +131,7 @@ body{
 	transition: 0.1s;
 	padding-top: 0.5vh;
 	font-size: 3vh;
+	cursor: pointer;
 }
 
 .formOptionL .option{
@@ -191,13 +192,19 @@ body{
 	outline: none;
 }
 
-#backgroundOne{
+#background{
 	position: absolute;
 	height: 100%;
 	width: 100%;
+	background-image: url("../images/backgrounds/firewatch.jpg");
+	background-position: top;
+	background-size: cover;
+	transition: 2s;
+}
+
+#background.sunset{
 	background-image: url("../images/backgrounds/sunset.jpg");
 	background-position: center;
-	background-size: cover;
 }
 
 #loadingScreen{
