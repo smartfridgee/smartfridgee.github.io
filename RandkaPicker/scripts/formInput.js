@@ -6,7 +6,7 @@ function formInputValueOne(event){
 		formInputOne[i].style.backgroundColor = "";
 	}
 	event.currentTarget.style.backgroundColor = "white";
-	formOutputOne = event.currentTarget.value;
+	formOutputOne = event.currentTarget.innerHTML;
 }
 
 for(i = 0; i < 2; i++){
@@ -21,7 +21,7 @@ function formInputValueTwo(event){
 		formInputTwo[i].style.backgroundColor = "";
 	}
 	event.currentTarget.style.backgroundColor = "white";
-	formOutputTwo = event.currentTarget.value;
+	formOutputTwo = event.currentTarget.innerHTML;
 }
 
 for(i = 0; i < 2; i++){
@@ -36,7 +36,7 @@ function formInputValueThree(event){
 		formInputThree[i].style.backgroundColor = "";
 	}
 	event.currentTarget.style.backgroundColor = "white";
-	formOutputThree = event.currentTarget.value;
+	formOutputThree = event.currentTarget.innerHTML;
 }
 
 for(i = 0; i < 2; i++){
@@ -51,7 +51,7 @@ function formInputValueFour(event){
 		formInputFour[i].style.backgroundColor = "";
 	}
 	event.currentTarget.style.backgroundColor = "white";
-	formOutputFour = event.currentTarget.value;
+	formOutputFour = event.currentTarget.innerHTML;
 }
 
 for(i = 0; i < 2; i++){
@@ -66,7 +66,7 @@ function formInputValueFive(event){
 		formInputFive[i].style.backgroundColor = "";
 	}
 	event.currentTarget.style.backgroundColor = "white";
-	formOutputFive = event.currentTarget.value;
+	formOutputFive = event.currentTarget.innerHTML;
 }
 
 for(i = 0; i < 2; i++){
