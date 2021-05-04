@@ -1,5 +1,5 @@
 //loadingScreenSTART
-const loadingScreen = setTimeout(function(){
+window.onload = setTimeout(function(){
 	overlay = document.getElementById("loadingScreen");
 	shark = document.getElementById("loadingShark");
 	overlay.classList.toggle("off");
