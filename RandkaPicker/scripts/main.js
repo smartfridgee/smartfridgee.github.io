@@ -1,13 +1,17 @@
 //loadingScreenSTART
-window.onload = setTimeout(function(){
-	overlay = document.getElementById("loadingScreen");
-	shark = document.getElementById("loadingShark");
-	overlay.classList.toggle("off");
-	shark.classList.toggle("off");
+window.onload = loadingScreen;
+
+function loadingScreen(){
 	setTimeout(function(){
-		overlay.remove();
-	}, 1000)
-}, 500)
+		overlay = document.getElementById("loadingScreen");
+		shark = document.getElementById("loadingShark");
+		overlay.classList.toggle("off");
+		shark.classList.toggle("off");
+		setTimeout(function(){
+			overlay.remove();
+		}, 1000)
+	}, 500)
+}
 //loadingScreenEND
 
 //backgroundChangeSTART
