@@ -1,4 +1,3 @@
-{
 const textShadow = "0px 0px 5px #466f94"
 const fontWeight = "bold";
 
@@ -85,5 +84,4 @@ function formInputValueFive(event){
 
 for(i = 0; i < 2; i++){
 	formInputFive[i].addEventListener('click', formInputValueFive);
-}
 }
