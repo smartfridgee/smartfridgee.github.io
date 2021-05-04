@@ -11,9 +11,25 @@ const loadingScreen = setTimeout(function(){
 //loadingScreenEND
 
 //backgroundChangeSTART
-const backgroundChange = setInterval(function(){
+let backgroundNumber = 1;
+
+const backgroundChangeFirewatch = setInterval(function(){
 	background = document.getElementById("background")
-	background.classList.toggle("sunset");
+	//0 = firewatch; 1 = sunset; 2 = village;
+	
+	if(backgroundNumber == 1){
+		background.classList.toggle("sunset");
+		backgroundNumber = 2;
+	}
+	else if(backgroundNumber == 2){
+		background.classList.toggle("sunset");
+		background.classList.toggle("village");
+		backgroundNumber = 0;
+	}
+	else if(backgroundNumber == 0){
+		background.classList.toggle("village");
+		backgroundNumber = 1;
+	}
 }, 15000)
 //backgroundChangeEND
 
@@ -24,7 +40,3 @@ let formOutputThree;
 let formOutputFour;
 let formOutputFive;
 //formOutputValuesEND
-
-function playAudio(url) {
-  new Audio(url).play();
-}

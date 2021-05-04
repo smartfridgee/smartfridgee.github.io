@@ -9,6 +9,7 @@ html{
 	font-family: 'Calibri', sans-serif;
 	font-size: 2vh;
 	user-select: none;
+	-webkit-user-select: none;
 }
 
 body{
@@ -203,6 +204,13 @@ body{
 #background.sunset{
 	background-image: url("../images/backgrounds/sunset.jpg");
 	background-position: center;
+	transition: 2s;
+}
+
+#background.village{
+	background-image: url("../images/backgrounds/village.jpg");
+	background-position: bottom;
+	transition: 2s;
 }
 
 #loadingScreen{
