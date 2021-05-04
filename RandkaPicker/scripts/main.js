@@ -14,6 +14,7 @@ function loadingScreen(){
 }
 //loadingScreenEND
 
+
 //backgroundChangeSTART
 let backgroundNumber = 1;
 
@@ -37,14 +38,8 @@ const backgroundChangeFirewatch = setInterval(function(){
 }, 15000)
 //backgroundChangeEND
 
-//formOutputValuesSTART
-let formOutputOne;
-let formOutputTwo;
-let formOutputThree;
-let formOutputFour;
-let formOutputFive;
-//formOutputValuesEND
 
+//checkInputSTART
 function checkInput(){
 	if(formOutputOne == null) return false;
 	if(formOutputTwo == null) return false;
@@ -54,13 +49,73 @@ function checkInput(){
 	
 	return true;
 }
+//checkInputSTOP
 
+
+//formSubmitSTART
 function formSubmit(){
 	let error = document.getElementById("title");
 	check = checkInput();
 	
 	if(check == false) return error.innerHTML = "WYBIERZ!", error.style.color = "red", error.style.fontWeight = "bold";
 	
-	return console.log("jej");
+	clearResult();
+	innerResult();
 	
+	let resultWindow = document.getElementById("formResult");
+	resultWindow.classList.add("on");
+	
+	return error.innerHTML = "WYBIERZ", error.style.color = "black", error.style.fontWeight = "normal";
 }
+//formSubmitSTOP
+
+
+//closeButtonSTART
+const closeButton = document.getElementById("closeButton");
+
+closeButton.addEventListener('click', () => {
+	let resultWindow = document.getElementById("formResult");
+	resultWindow.classList.remove("on");
+})
+//closeButtonSTOP
+
+
+//innerResultSTART
+function innerResult(){
+	let list = document.getElementById("formResultList");
+	let newcontent = document.createElement('div');
+	
+	let alone = formOutputOne.toLowerCase();
+	let anxiety = formOutputTwo.toLowerCase();
+	let weather = formOutputThree.toLowerCase();
+	let strong = formOutputFour.toLowerCase();
+	let food = formOutputFive.toLowerCase();
+
+	dateList.filter((item) => {
+		if(item.alone == alone && item.anxiety == anxiety && item.weather == weather && item.strong == strong && item.food == food){
+			
+			newcontent.innerHTML = '<div class="formResultOption">'+item.name+'</div>';
+
+			while (newcontent.firstChild) {
+				list.appendChild(newcontent.firstChild);
+			}
+			
+		}
+	});
+}
+//innerResultSTOP
+
+
+//clearResultSTART
+function clearResult(){
+	let list = document.getElementById("formResultList");
+	list.innerHTML = "";
+}
+//clearResultSTOP
+
+
+//playAudioSTART
+function playAudio(url) {
+  new Audio(url).play();
+}
+//playAudioSTOP

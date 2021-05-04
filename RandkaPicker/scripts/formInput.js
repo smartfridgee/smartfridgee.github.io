@@ -1,6 +1,14 @@
 const textShadow = "0px 0px 5px #466f94"
 const fontWeight = "bold";
 
+//formOutputValuesSTART
+let formOutputOne;
+let formOutputTwo;
+let formOutputThree;
+let formOutputFour;
+let formOutputFive;
+//formOutputValuesEND
+
 //ONE
 const formInputOne = document.getElementById("inputOne").getElementsByClassName("option");
 

@@ -144,21 +144,69 @@ body{
 	text-align: right;
 }
 
-.mainFooter{
-	position: relative;
-	height: 6vh;
+.formResult{
+	position: absolute;
+	top: 0;
 	width: 100%;
-	padding-top: 1.9vh;
-	color: white;
-	font-size: 1.6vh;
-	font-variant: small-caps;
-	background-color: black;
-	text-align: center;
+	height: 0;
+	background-color: #1f2124;
+	overflow: hidden;
+	transition: 2s;
+}
+
+.formResult.on{
+	height: 100%;
 }
 
 .formButton{
 	height: 10%;
-	padding-top: 1.5vh;
+	padding-top: 1.3vh;
+}
+
+.formResultTitle{
+	position: relative;
+	height: 12%;
+	padding-top: 1.25vh;
+	font-size: 6vh;
+	font-family: 'Unica One', cursive;
+	color: white;
+}
+
+#formResultList{
+	position: relative;
+	overflow: hidden;
+	height: 78%;
+}
+
+.formResultOption{
+	width: 80%;
+	height: 8vh;
+	margin-bottom: 1.1vh;
+	background-color: grey;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.closeButton{
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	height: 10%;
+	color: #525252;
+	font-size: 4vh;
+	transition: 0.5s;
+}
+
+.closeButton:hover{
+	color: #ff9036;
+}
+
+.closeButton:active{
+	color: #cc7229;
+	transition: 0.2s;
 }
 
 .button{
@@ -189,6 +237,18 @@ body{
 
 .button:focus{
 	outline: none;
+}
+
+.mainFooter{
+	position: relative;
+	height: 6vh;
+	width: 100%;
+	padding-top: 1.9vh;
+	color: white;
+	font-size: 1.6vh;
+	font-variant: small-caps;
+	background-color: black;
+	text-align: center;
 }
 
 #background{
@@ -332,3 +392,23 @@ body{
 	}
 }
 
+/* width */
+::-webkit-scrollbar {
+	position: absolute;
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #363636;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #3b3b3b;
+}

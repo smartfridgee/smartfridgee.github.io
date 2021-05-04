@@ -1,14 +1,6 @@
 let dateList = [
-	{ name: 'Randeczka nad jeziorkiem', alone: 'no', anxiety: 'no', weather: 'yes', strong: 'yes', food: 'no'},
-	{ name: 'Randeczka w domciu', alone: 'no', anxiety: 'no', weather: 'no', strong: 'yes', food: 'no'},
-	{ name: 'Randeczka w parku', alone: 'no', anxiety: 'no', weather: 'yes', strong: 'yes', food: 'no'},
-	{ name: 'Randeczka u mnie', alone: 'no', anxiety: 'no', weather: 'no', strong: 'yes', food: 'no'}
+	{ name: 'Randeczka nad jeziorkiem', alone: 'nie', anxiety: 'nie', weather: 'tak', strong: 'tak', food: 'nie'},
+	{ name: 'Randeczka w domciu', alone: 'nie', anxiety: 'nie', weather: 'nie', strong: 'tak', food: 'nie'},
+	{ name: 'Randeczka w parku', alone: 'nie', anxiety: 'nie', weather: 'tak', strong: 'tak', food: 'nie'},
+	{ name: 'Randeczka u mnie', alone: 'nie', anxiety: 'nie', weather: 'nie', strong: 'tak', food: 'nie'}
 ]
-
-let criteria = "yes";
-
-let dateOutput = dateList.filter((item) => {
-	return item.weather == criteria;
-})
-
-console.log(dateOutput);
