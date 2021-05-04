@@ -40,3 +40,23 @@ let formOutputThree;
 let formOutputFour;
 let formOutputFive;
 //formOutputValuesEND
+
+function checkInput(){
+	if(formOutputOne == null) return false;
+	if(formOutputTwo == null) return false;
+	if(formOutputThree == null) return false;
+	if(formOutputFour == null) return false;
+	if(formOutputFive == null) return false;
+	
+	return true;
+}
+
+function formSubmit(){
+	let error = document.getElementById("title");
+	check = checkInput();
+	
+	if(check == false) return error.innerHTML = "WYBIERZ!", error.style.color = "red", error.style.fontWeight = "bold";
+	
+	return console.log("jej");
+	
+}

@@ -1,8 +1,9 @@
-//ONE
-const formInputOne = document.getElementById("inputOne").getElementsByClassName("option");
-
+{
 const textShadow = "0px 0px 5px #466f94"
 const fontWeight = "bold";
+
+//ONE
+const formInputOne = document.getElementById("inputOne").getElementsByClassName("option");
 
 function formInputValueOne(event){
 	for(i = 0; i < 2; i++){
@@ -84,4 +85,5 @@ function formInputValueFive(event){
 
 for(i = 0; i < 2; i++){
 	formInputFive[i].addEventListener('click', formInputValueFive);
+}
 }
