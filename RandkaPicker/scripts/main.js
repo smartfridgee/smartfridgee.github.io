@@ -14,7 +14,7 @@ const loadingScreen = setTimeout(function(){
 const backgroundChange = setInterval(function(){
 	background = document.getElementById("background")
 	background.classList.toggle("sunset");
-}, 7000)
+}, 15000)
 //backgroundChangeEND
 
 //formOutputValuesSTART
@@ -24,3 +24,7 @@ let formOutputThree;
 let formOutputFour;
 let formOutputFive;
 //formOutputValuesEND
+
+function playAudio(url) {
+  new Audio(url).play();
+}

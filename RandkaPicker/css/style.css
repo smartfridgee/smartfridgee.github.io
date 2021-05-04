@@ -162,28 +162,27 @@ body{
 
 .button{
 	border-radius: 10px;
-	background-color: #4CAF50;
+	background-color: #474747;
 	border: none;
 	color: white;
 	padding: 1.5vh;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-family: 'Poppins', sans-serif;
-	font-size: 2vh;
+	font-family: 'Unica One', cursive;
+	text-transform: uppercase;
+	font-size: 2.2vh;
 	cursor: pointer;
 	transition: 0.5s;
 }
 
 .button:hover{
-	background-color: #3b833e;
-	color: white;
+	background-color: #ff9036;
 	transition: 0.5s;
 }
 
 .button:active{
-	background-color: #2f6a31;
-	color: white;
+	background-color: #cc7229;
 	transition: 0.2s;
 }
 
@@ -262,6 +261,10 @@ body{
 	}
 	.mainMenuTitle{
 		color: white;
+	}
+	.button:hover{
+		background-color: #474747;
+		transition: 0.2s;
 	}
 }
 
