@@ -8,23 +8,31 @@ canvas.height = height;
 canvas.width = width;
 
 //MENU
-$("#rules").click(function(){
-	$("#rulestab").toggleClass("on");
-});
+let rules = document.getElementById("rules");
+
+rules.addEventListener('click', () => {
+  document.getElementById("menu").classList.toggle("off");
+  document.getElementById("gameover_grad").classList.toggle("on");
+})
 
 //START
-$("#start").click(function(){
+
+let start = document.getElementById("start");
+
+start.addEventListener('click', () => {
 	let countime = 3;
-	$("#menu").toggleClass("off");
-	$("#system").toggleClass("on");
-	$("#odliczanie").toggleClass("on");
+	
+	document.getElementById("menu").classList.toggle("off"); 
+	document.getElementById("system").classList.toggle("on"); 
+	document.getElementById("odliczanie").classList.toggle("on"); 
   
 	xObiekt = Math.floor(Math.random() * width);
 	yObiekt = Math.floor(Math.random() * height);
   
 	countdown = setInterval(function(){
+		/////////ODLICZANIE/////////
 		countime--;
-		$("#odliczanie").html(countime);
+		document.getElementById("odliczanie").innerHTML = countime; 
 		
 		if(countime == 0){
 			/////////MOVEMENT/////////
@@ -35,14 +43,14 @@ $("#start").click(function(){
 			
 			/////////ODLICZANIE/////////
 			clearInterval(countdown);
-			$("#odliczanie").toggleClass("on");
-			$("#odliczanie").html("3");
+			document.getElementById("odliczanie").classList.toggle("on"); 
+			document.getElementById("odliczanie").innerHTML = "3"; 
 			
 			/////////PAUSE/////////
 			pauseBind();
 		}
-  }, 1000);
-});
+	}, 1000);
+})
 
 //GAME
 canvas.addEventListener("mousemove", function(e){
@@ -97,7 +105,6 @@ function draw() {
 		if((xObiekt > xMyszka-25 && xObiekt < xMyszka+25)  && (yObiekt > yMyszka-25 && yObiekt < yMyszka+25)){
 			
 			/////////MOVEMENT/////////
-			console.log("zgon");
 			clearInterval(play);
 			c.fillStyle="white";
 			c.fillRect(0,0,width, height);
@@ -109,16 +116,16 @@ function draw() {
 			goWynik.innerHTML = level-1;
 			goRekord.innerHTML = best;
 			mRekord.innerHTML = best;
-			tlevel = 5;
+			tLevel = 5;
 			level = 1;
 			speed = sSpeed;
-			licznik.innerHTML = tlevel;
+			licznik.innerHTML = tLevel;
 			poziom.innerHTML = level;
 			
 			/////////GAMEOVER/////////
-			$("#go_character").html(dead);
-			$("#system").toggleClass("on");
-			$("#gameover_grad").toggleClass("on");
+			document.getElementById("go_character").innerHTML = dead;
+			document.getElementById("system").classList.toggle("on");
+			document.getElementById("gameover_grad").classList.toggle("on");
 			
 			/////////PAUSE/////////
 			pauseUnBind();
@@ -134,7 +141,7 @@ var goWynik = document.getElementById("go_wynik");
 var goRekord = document.getElementById("go_rekord");
 var mRekord = document.getElementById("menu_rvalue");
 
-var tlevel = 5;
+var tLevel = 5;
 var sSpeed = 1;
 var level = 1;
 var sTime = 1;
@@ -144,14 +151,14 @@ var timer;
 var time;
 		
 function system(){
-	time = tlevel;
+	time = tLevel;
 	timer = setInterval(function(){
 		time--;
 		licznik.innerHTML = time;
 		
 		if(time == 0){
-			tlevel += sTime;
-			time = tlevel;
+			tLevel += sTime;
+			time = tLevel;
 			
 			/////////REKORD/////////
 			if(level > best){
@@ -170,72 +177,81 @@ function system(){
 	}, 1000);	
 }
 
+function pauseSystem(){
+	play = setInterval('draw()',10);
+	timer = setInterval(function(){
+		time--;
+		licznik.innerHTML = time;
+	
+		if(time == 0){
+			tLevel += sTime;
+			time = tLevel;
+			
+			/////////REKORD/////////
+			if(level > best){
+				best = level;
+				rekord.innerHTML = best;
+			}
+			
+			level += 1;
+			licznik.innerHTML = time;
+			poziom.innerHTML = level;
+			/////////MOVEMENT/////////
+			speed += sSpeed;
+		}
+	}, 1000);
+}
+
 //GAMEOVER
-$("#go_menu").click(function(){
-  $("#menu").toggleClass("off");
-  $("#gameover_grad").toggleClass("on");
-  $("body").css("cursor", "default");
-});
+let gameoverMenu = document.getElementById("go_menu");
+
+gameoverMenu.addEventListener('click', () => {
+  document.getElementById("menu").classList.toggle("off");
+  document.getElementById("gameover_grad").classList.toggle("on");
+})
 
 //PAUSE
 function pauseBind(){
-	$(document).bind('keydown', function (e) {
-	   var key = e.which;
+	document.addEventListener('keydown', escApply);
+}
+
+function escApply(event){
+	var key = event.which;
 		switch(key){
 			//0
 		 case 27:
 			pause();
-			console.log("pause");
 		}
-	});
 }
 
 function pauseUnBind(){
-	$(document).unbind('keydown');
+	document.removeEventListener('keydown', escApply);
 }
 
-var check = 1;
+let check = 1;
 
 function pause(){
-	$("#pause").toggleClass("on");
+	document.getElementById("pause").classList.toggle("on"); 
 	if(check == 1){
 		clearInterval(play);
 		clearInterval(timer);
 		check = 0;
 	}
 	else if(check == 0){
-		$("#odliczanie").toggleClass("on");
+		document.getElementById("odliczanie").classList.toggle("on"); 
+		pauseUnBind();
 		countime = 3;
 		countdown = setInterval(function(){
 			countime--;
-			$("#odliczanie").html(countime);
+			document.getElementById("odliczanie").innerHTML = countime; 
 			if(countime == 0){
-				play = setInterval('draw()',10);
-				timer = setInterval(function(){
-					time--;
-					licznik.innerHTML = time;
-				
-					if(time == 0){
-						tlevel += sTime;
-						time = tlevel;
-						
-						/////////REKORD/////////
-						if(level > best){
-							best = level;
-							rekord.innerHTML = best;
-						}
-						
-						level += 1;
-						licznik.innerHTML = time;
-						poziom.innerHTML = level;
-						/////////MOVEMENT/////////
-						speed += sSpeed;
-					}	
-				}, 1000);	
+				pauseSystem();
 				check = 1;
 				clearInterval(countdown);
-				$("#odliczanie").toggleClass("on");
-				$("#odliczanie").html("3");
+				document.getElementById("odliczanie").classList.toggle("on"); 
+				document.getElementById("odliczanie").innerHTML = "3"; 
+				/////////PAUSE/////////
+				pauseBind();
 			}
 		}, 1000);
 	}

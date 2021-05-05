@@ -1,28 +1,32 @@
 //CHARACTER
-window.onload = $("#img1").css("border", "3px solid #00fcc2");
+let img1 = document.getElementById("img1");
+let img2 = document.getElementById("img2");
+let img3 = document.getElementById("img3");
+
+window.onload = img1.style.border = "3px solid #00fcc2";
 
 var angleB = 1;
 
 var character = 1;
 
-$("#img1").click(function(){
-  $(this).css("border", "3px solid #00fcc2");
-  $("#img2").css("border", "");
-  $("#img3").css("border", "");
+img1.addEventListener('click', () => {
+  img1.style.border = "3px solid #00fcc2";
+  img2.style.border = "";
+  img3.style.border = ""; 
   character = 1;
 });
 
-$("#img2").click(function(){
-  $(this).css("border", "3px solid #00fcc2");
-  $("#img1").css("border", "");
-  $("#img3").css("border", "");
+img2.addEventListener('click', () => {
+  img2.style.border = "3px solid #00fcc2";
+  img1.style.border = "";
+  img3.style.border = ""; 
   character = 2;
 });
 
-$("#img3").click(function(){
-  $(this).css("border", "3px solid #00fcc2");
-  $("#img1").css("border", "");
-  $("#img2").css("border", "");
+img3.addEventListener('click', () => {
+  img3.style.border = "3px solid #00fcc2";
+  img1.style.border = "";
+  img2.style.border = ""; 
   character = 3;
 });
 
