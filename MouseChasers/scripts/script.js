@@ -1,3 +1,18 @@
+//LoadingScreenSTART
+window.onload = loadingScreen;
+
+function loadingScreen(){
+	setTimeout(function(){
+		overlay = document.getElementById("loadingScreen");
+		overlay.classList.toggle("off");
+		setTimeout(function(){
+			overlay.remove();
+		}, 1000)
+	}, 500)
+}
+//LoadingScreenSTOP
+
+
 //CanvasSTART
 var canvas = document.getElementById("canvas");
 
@@ -159,8 +174,8 @@ var level = 1;
 var sTime = 1;
 var best = localRecord();
 
-window.onload = mRekord.innerHTML = best;
-window.onload = rekord.innerHTML = best;
+mRekord.innerHTML = best;
+rekord.innerHTML = best;
 
 
 var timer;
@@ -289,4 +304,3 @@ function pause(){
 	}
 }
 //PauseSTOP
-

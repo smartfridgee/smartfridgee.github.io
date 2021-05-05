@@ -12,6 +12,7 @@ body{
 	width: 100%;
 	min-height: 100vh;
 	user-select: none;
+	overflow-x: hidden;
 }
 
 /*MENU*//*MENU*//*MENU*/
@@ -426,6 +427,32 @@ li{
 	left: 85%;
 	transform: translate(-50%, -50%);
 	font-size: 20px;
+}
+
+#loadingScreen{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: rgba(255,255,255,1);
+	background-image: linear-gradient(rgba(138,235,255,1), rgba(255,255,255,1));
+	z-index: 99;
+}
+
+#loadingText{
+	position: absolute;
+	font-family: 'Calibri';
+	font-variant: small-caps;
+	font-weight: lighter;
+	width: 100%;
+	font-size: 3em;
+	top: 45%;
+	text-align: center;
+}
+
+#loadingScreen.off{
+	left: 100%;
+	transition: 1s;
 }
 
 #canvas{
