@@ -138,7 +138,6 @@ function draw() {
 }
 //GameSTOP
 
-
 //SystemSTART
 var licznik = document.getElementById("licznik");
 var poziom = document.getElementById("poziom");
@@ -147,11 +146,22 @@ var goWynik = document.getElementById("go_wynik");
 var goRekord = document.getElementById("go_rekord");
 var mRekord = document.getElementById("menu_rvalue");
 
+let localRecord = () =>{
+	if(localStorage.getItem('record') != null){
+		return parseInt(localStorage.getItem('record'));
+	}
+	return 0;
+}
+
 var tLevel = 5;
 var sSpeed = 1;
 var level = 1;
 var sTime = 1;
-var best = 0;
+var best = localRecord();
+
+window.onload = mRekord.innerHTML = best;
+window.onload = rekord.innerHTML = best;
+
 
 var timer;
 var time;
@@ -170,6 +180,7 @@ function system(){
 			if(level > best){
 				best = level;
 				rekord.innerHTML = best;
+				localStorage.setItem('record', best);
 			}
 			
 			level += 1;
@@ -197,6 +208,7 @@ function pauseSystem(){
 			if(level > best){
 				best = level;
 				rekord.innerHTML = best;
+				localStorage.setItem('record', best);
 			}
 			
 			level += 1;
@@ -277,3 +289,4 @@ function pause(){
 	}
 }
 //PauseSTOP
+
