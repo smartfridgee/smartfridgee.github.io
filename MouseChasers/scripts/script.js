@@ -1,4 +1,4 @@
-//CANVAS
+//CanvasSTART
 var canvas = document.getElementById("canvas");
 
 var height = window.innerHeight;
@@ -6,17 +6,19 @@ var width = window.innerWidth;
 
 canvas.height = height;
 canvas.width = width;
+//CanvasSTOP
 
-//MENU
+
+//MenuSTART
 let rules = document.getElementById("rules");
 
 rules.addEventListener('click', () => {
-  document.getElementById("menu").classList.toggle("off");
-  document.getElementById("gameover_grad").classList.toggle("on");
+  document.getElementById("rulestab").classList.toggle("on");
 })
+//MenuSTOP
 
-//START
 
+//StartSTART
 let start = document.getElementById("start");
 
 start.addEventListener('click', () => {
@@ -51,8 +53,10 @@ start.addEventListener('click', () => {
 		}
 	}, 1000);
 })
+//StartSTOP
 
-//GAME
+
+//GameSTART
 canvas.addEventListener("mousemove", function(e){
     xMyszka = e.pageX;
     yMyszka = e.pageY;
@@ -132,8 +136,10 @@ function draw() {
 		}
 	}
 }
+//GameSTOP
 
-//SYSTEM
+
+//SystemSTART
 var licznik = document.getElementById("licznik");
 var poziom = document.getElementById("poziom");
 var rekord = document.getElementById("rekord");
@@ -196,21 +202,26 @@ function pauseSystem(){
 			level += 1;
 			licznik.innerHTML = time;
 			poziom.innerHTML = level;
+			
 			/////////MOVEMENT/////////
 			speed += sSpeed;
 		}
 	}, 1000);
 }
+//SystemSTOP
 
-//GAMEOVER
+
+//GameoverSTART
 let gameoverMenu = document.getElementById("go_menu");
 
 gameoverMenu.addEventListener('click', () => {
   document.getElementById("menu").classList.toggle("off");
   document.getElementById("gameover_grad").classList.toggle("on");
 })
+//GameoverSTOP
 
-//PAUSE
+
+//PauseSTART
 function pauseBind(){
 	document.addEventListener('keydown', escApply);
 }
@@ -239,22 +250,30 @@ function pause(){
 	}
 	else if(check == 0){
 		document.getElementById("odliczanie").classList.toggle("on"); 
+		/////////PAUSE/////////
 		pauseUnBind();
+		
+		/////////ODLICZANIE/////////
 		countime = 3;
 		countdown = setInterval(function(){
+			
 			countime--;
 			document.getElementById("odliczanie").innerHTML = countime; 
+			
 			if(countime == 0){
+				/////////SYSTEM/////////
 				pauseSystem();
 				check = 1;
+				
+				/////////ODLICZANIE/////////
 				clearInterval(countdown);
 				document.getElementById("odliczanie").classList.toggle("on"); 
 				document.getElementById("odliczanie").innerHTML = "3"; 
+				
 				/////////PAUSE/////////
 				pauseBind();
 			}
 		}, 1000);
 	}
 }
-
-
+//PauseSTOP
