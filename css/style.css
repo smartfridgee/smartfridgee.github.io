@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	width: 100%;
+	height: 240vh;
+	background-size: cover;
+
+}
+
+.gradient{
+	background-image: linear-gradient(#1f0081, #9f2beb);
+	width: 100%;
+	height: 120vh;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #6f1fa3;
+}
+ 
+::-webkit-scrollbar-thumb {
+	background: #9b47d1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #3b3b3b;
+}
+
+.background-stars{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 5;
+}
+
+.hello{
+	position: absolute;
+	width: 100%;
+	top: 300px;
+	text-align: center;
+	z-index: 10;
+}
+
+.hello .title{
+	font-size: 20vh;
+	color: white;
+}
+
+.hello .under-title{
+	position: relative;
+	top: -7vh;
+	font-size: 6vh;
+	background: linear-gradient(#9f2beb, #8e28d1);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+.fade{
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 20%;
+	background: linear-gradient(transparent, #8e28d1);
+	z-index: 20;
+}
+
+.main{
+	position: absolute;
+	top: 120%;
+	width: 100%;
+	height: 120vh;
+	background: linear-gradient(#8e28d1, #2f0c45);
+	z-index: 15;
+}
+
+.left{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.left .header-projects{
+	position: relative;
+	margin-left: 5vw;
+	top: 220px;
+	text-align: left;
+	color: white;
+	font-size: 10vh;
+}
+
+.left .info-projects{
+	position: relative;
+	top: 220px;
+	margin-left: 5vw;
+	font-size: 5vh;
+	color: white;
+	font-weight: 300;
+}
+
+.right{
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+.right .header-about{
+	position: relative;
+	margin-right: 5vw;
+	top: 220px;
+	text-align: right;
+	color: white;
+	font-size: 10vh;
+}
+
+.right .info-about{
+	position: relative;
+	top: 220px;
+	text-align: right;
+	margin-right: 5vw;
+	font-size: 5vh;
+	color: white;
+}
+
+.footer{
+	position: absolute;
+	width: 100%;
+	height: 5%;
+	top: 95%;
+	text-align: center;
+	font-size: 2vh;
+	padding-top: 15px;
+	color: #8e28d1;
+	background: linear-gradient(#9f2beb, #2f0c45);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+a:hover{
+	color: #d08cff;
+}
+
+@media only screen and (max-width: 1200px){
+	.main{
+		height: 140vh;
+	}
+	.left{
+		width: 100%;
+		height: 40%;
+		float: left;
+	}
+	.right{
+		width: 100%;
+		height: 40%;
+		float: left;
+	}
+}
+
+@media only screen and (max-width: 490px){
+	.left{
+		height: 35%;
+		float: left;
+	}
+	.right{
+		height: 35%;
+	}
+	.main{
+		height: 120vh;
+	}
+	.hello .title{
+		font-size: 15vh;
+	}
+	.hello .under-title{
+		top: -6vh;
+		font-size: 4.5vh;
+	}
+	.left .header-projects{
+		font-size: 7vh;
+	}
+	.left .info-projects{
+		font-size: 3vh;
+	}
+	.right .header-about{
+		font-size: 7vh;
+	}
+	.right .info-about{
+		font-size: 3vh;
+	}
+}
