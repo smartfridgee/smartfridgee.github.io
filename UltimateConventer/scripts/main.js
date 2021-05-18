@@ -107,14 +107,12 @@ for(i = 0; i < selects.length; i++){
 	selects[i].addEventListener('change', convertValues);
 }
 
-let mm, cm, m, km, output;
-
 function convertValues(){
 	inputTypeValue = inputType.value;
 	outputTypeValue = outputType.value;
 	inputNumberValue = inputNumber.value;
 	
-	
+	let mm, cm, m, km, output;
 	
 	if(inputTypeValue == "mm"){
 		mm = 1;
