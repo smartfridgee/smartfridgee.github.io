@@ -79,6 +79,7 @@ a:hover{
 header{
 	width: 100%;
 	background-color: var(--dark-head);
+	transition: 1s;
 }
 
 .split{
@@ -114,6 +115,7 @@ header{
 }
 
 .tab{
+	overflow: hidden;
 }
 
 .side-padding{
@@ -237,6 +239,13 @@ select{
 	font-size: 2.4rem;
 }
 
+.nav-button{
+	display: none;
+	position: absolute;
+	right: 2em;
+	top: 2.5em;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   select {
     -webkit-appearance: none;
@@ -270,12 +279,27 @@ select{
 
 @media screen and (max-width: 430px){
 	h1{
-		font-size: 10vw;
-	}
-	.tab{
-		display: none;
+		font-size: 9vw;
+		text-align: left;
+		padding-left: 0.7em;
 	}
 	input{
 		max-width: 80%;
+	}
+	header .split{
+		flex-direction: column;
+		transition: 1s;
+	}
+	.tab{
+		height: 0;
+		width: inherit;
+		transition: 1s;
+	}
+	.slide{
+		height: 15rem;
+		transition: 1s;
+	}
+	.nav-button{
+		display: inherit;
 	}
 }

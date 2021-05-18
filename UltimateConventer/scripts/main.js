@@ -1,3 +1,13 @@
+// NAV START //
+
+const navBar = document.getElementById("nav");
+const navButton = document.querySelector("header").querySelector("button");
+
+navButton.addEventListener('click', ()=> {
+	nav.classList.toggle("slide");
+})
+
+// NAV STOP //
 // TEXT START //
 let textInput = document.getElementById("textinput");
 const textButtons = document.getElementById("text").getElementsByClassName("button");
