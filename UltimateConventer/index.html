@@ -1,0 +1,100 @@
+<!doctype HTML>
+<html lang="pl-PL">
+    <head>
+		<meta charset="utf-8">
+		<title>Ultimate Conventer</title>
+		<meta name="author" content="Bastian Wierzchnicki">
+		<meta name="description" content="UltimateConventer">
+		<meta name="keywords" content="HTML, CSS, JavaScript, Conventer">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;400&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+		<header>
+			<div class="container text-center center title-padding">
+				<h1>UltimateConventer</h1>
+				<div class="split padding-header tab">
+					<a href="#text">tekst</a>
+					<a href="#metrics">miary</a>
+					<a href="#masy">masy</a>
+					<a href="#speeds">prędkości</a>
+				</div>
+			</div>
+		</header>
+		<section id="text">
+			<div class="container text-center center section-bkg section-padding section-border">
+				<h2>tekst</h2>
+				<br>
+				<textarea id="textinput" placeholder="wpisz tekst"></textarea>
+				<div class="split-section button-padding">
+					<button class="button" value="uppercase">duże litery</button>
+					<button class="button" value="lowercase">małe litery</button>
+					<button class="button" value="startcase">początek wyrazów</button>
+					<button class="button" value="sentencecase">zdanie</button>
+					<button class="button" value="mixedst">mieszane1</button>
+					<button class="button" value="mixednd">mieszane2</button>
+				</div>
+			</div>
+		</section>
+		<section id="metrics">
+			<div class="container text-center center section-bkg section-padding section-border">
+				<h2>miary</h2>
+				<br>
+				<!--CONVERT-->
+				<h3>metrics</h3>
+				<div id="mtconv" class="split-option">
+					<div>
+						<input type="number" id="mtarea" placeholder="wpisz wartość">
+						<select id="metricsIPT">
+							<option value="mm">mm</option>
+							<option value="cm">cm</option>
+							<option value="m">m</option>
+							<option value="km">km</option>
+						</select>
+					</div>
+					<div class="arrow">
+						>
+					</div>
+					<div>
+						<input type="number" id="mtoutput" placeholder="output" disabled>
+						<select id="metricsOPT">
+							<option value="mm">mm</option>
+							<option value="cm">cm</option>
+							<option value="m">m</option>
+							<option value="km">km</option>
+						</select>
+					</div>
+				</div>
+				<!--TO FEET-->
+				<h3>metrics to inches</h3>
+				<div id="mttoft" class="split-option">
+					<div>
+						<input type="number" id="ftarea" placeholder="wpisz wartość">
+						<select id="">
+							<option value="mm">mm</option>
+							<option value="cm">cm</option>
+							<option value="m">m</option>
+							<option value="km">km</option>
+						</select>
+					</div>
+					<div class="arrow">
+						>
+					</div>
+					<div>
+						<input type="number" id="ftoutput" placeholder="output" disabled>
+						<select id="">
+							<option value="inch">inch</option>
+							<option value="ft">ft</option>
+							<option value="mi">mi</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="scripts/main.js"></script>
+    </body>
+</html>
