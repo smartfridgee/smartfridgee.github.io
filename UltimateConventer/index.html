@@ -16,11 +16,11 @@
     <body>
 		<header>
 			<div class="container text-center center title-padding">
-				<h1>UltimateConventer</h1><button class="nav-button">test</button>
+				<div class="split-nav"><h1>UltimateConventer</h1><button id="navbutton" class="nav-button text-center"><div class="nav-arrow"> &#8801; </div></button></div>
 				<div id="nav" class="split padding-header tab">
 					<a href="#text">tekst</a>
 					<a href="#metrics">miary</a>
-					<a href="#masy">masy</a>
+					<a href="#weights">masy</a>
 					<a href="#speeds">prędkości</a>
 				</div>
 			</div>
@@ -41,7 +41,7 @@
 			</div>
 		</section>
 		<section id="metrics">
-			<div class="container text-center center section-bkg section-padding section-border">
+			<div class="container text-center center section-bkg section-padding section-border" style="background-color: #262626;">
 				<h2>miary</h2>
 				<br>
 				<!--CONVERT-->
@@ -73,8 +73,8 @@
 				<h3>metrics to inches</h3>
 				<div id="mttoft" class="split-option">
 					<div>
-						<input type="number" id="ftarea" placeholder="wpisz wartość">
-						<select id="">
+						<input type="number" id="ftarea" class="unavailable" placeholder="niedostępne" disabled>
+						<select id="" disabled>
 							<option value="mm">mm</option>
 							<option value="cm">cm</option>
 							<option value="m">m</option>
@@ -85,16 +85,98 @@
 						>
 					</div>
 					<div>
-						<input type="number" id="ftoutput" placeholder="output" disabled>
-						<select id="">
+						<input type="number" id="ftoutput" class="unavailable" placeholder="niedostępne" disabled>
+						<select id="" disabled>
 							<option value="inch">inch</option>
 							<option value="ft">ft</option>
 							<option value="mi">mi</option>
 						</select>
 					</div>
 				</div>
+				<h3>inches to metrics</h3>
+				<div id="fttomt" class="split-option">
+					<div>
+						<input type="number" id="fmarea" class="unavailable" placeholder="niedostępne" disabled>
+						<select id="" disabled>
+							<option value="inch">inch</option>
+							<option value="ft">ft</option>
+							<option value="mi">mi</option>
+						</select>
+					</div>
+					<div class="arrow">
+						>
+					</div>
+					<div>
+						<input type="number" id="fmoutput" class="unavailable" placeholder="niedostępne" disabled>
+						<select id="" disabled>
+							<option value="mm">mm</option>
+							<option value="cm">cm</option>
+							<option value="m">m</option>
+							<option value="km">km</option>
+						</select>
+					</div>
+				</div>
 			</div>
 		</section>
+		<section id="weights">
+			<div class="container text-center center section-bkg section-padding section-border">
+				<h2>masy</h2>
+				<br>
+				<div id="wghconv" class="split-option">
+					<div>
+						<input type="number" id="wgharea" placeholder="wpisz wartość">
+						<select id="weightsIPT">
+							<option value="g">g</option>
+							<option value="ml">ml</option>
+							<option value="dag">dag</option>
+							<option value="l">l</option>
+							<option value="kg">kg</option>
+							<option value="t">t</option>
+						</select>
+					</div>
+					<div class="arrow">
+						>
+					</div>
+					<div>
+						<input type="number" id="wghoutput" placeholder="output" disabled>
+						<select id="weightsOPT">
+							<option value="g">g</option>
+							<option value="ml">ml</option>
+							<option value="dag">dag</option>
+							<option value="l">l</option>
+							<option value="kg">kg</option>
+							<option value="t">t</option>
+						</select>
+					</div>
+				</div>
+		</section>
+		<section id="speeds">
+			<div class="container text-center center section-bkg section-padding section-border" style="background-color: #262626;">
+				<h2>prędkości</h2>
+				<br>
+				<div id="spdconv" class="split-option">
+					<div>
+						<input type="number" id="spdarea" placeholder="wpisz wartość">
+						<select id="speedsIPT">
+							<option value="kmh">kmh</option>
+							<option value="mph">mph</option>
+						</select>
+					</div>
+					<div class="arrow">
+						>
+					</div>
+					<div>
+						<input type="number" id="spdoutput" placeholder="output" disabled>
+						<select id="speedsOPT">
+							<option value="mph">mph</option>
+							<option value="kmh">kmh</option>
+						</select>
+					</div>
+				</div>
+		</section>
+		<footer class="section-padding text-center">
+			<text>copyright &copy 2021 smartfridgee
+		</footer>
 		<script src="scripts/main.js"></script>
     </body>
 </html>

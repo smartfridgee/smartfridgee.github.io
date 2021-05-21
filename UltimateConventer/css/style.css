@@ -30,12 +30,18 @@
 	background: var(--dark-section);
 }
 
+.unavailable::placeholder{
+	color: red;
+	opacity: 0.7;
+}
+
 html{
 	height: 100%;
 	color: white;
 	font-family: 'KoHo', sans-serif;
 	background-color: var(--dark-bkg);
 	scroll-behavior: smooth;
+	-webkit-scroll-behavior: smooth;
 }
 
 body{
@@ -79,7 +85,14 @@ a:hover{
 header{
 	width: 100%;
 	background-color: var(--dark-head);
-	transition: 1s;
+}
+
+footer{
+	width: 100%;
+	background-color: var(--dark-head);
+	color: var(--dark-text);
+	font-weight: 300;
+	border-top: 2px solid var(--dark-bkg);
 }
 
 .split{
@@ -241,9 +254,37 @@ select{
 
 .nav-button{
 	display: none;
-	position: absolute;
-	right: 2em;
-	top: 2.5em;
+	background-color: grey;
+	width: 12%;
+	object-fit: cover;
+	outline: none;
+	border: none;
+	border-radius: 0.6em;
+	margin-top: 0.5%;
+	background-color: var(--dark-bkg);
+	padding-top: 0.5%;
+}
+
+.nav-button:active{
+	background-color: var(--dark-section);
+}
+
+.nav-arrow:active{
+	color: var(--dark-text);
+}
+
+.nav-arrow{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-size: 6vw;
+	color: white;
+}
+
+.split-nav{
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -293,13 +334,20 @@ select{
 	.tab{
 		height: 0;
 		width: inherit;
-		transition: 1s;
 	}
 	.slide{
-		height: 15rem;
-		transition: 1s;
+		height: 14rem;
+		transition: height 1s;
 	}
 	.nav-button{
 		display: inherit;
+	}
+	.split-nav{
+		display: flex;
+		padding-right: 1.3em;
+		justify-content: space-between;
+	}
+	a:hover{
+		color: var(--dark-text);
 	}
 }

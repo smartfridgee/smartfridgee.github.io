@@ -1,7 +1,7 @@
 // NAV START //
 
 const navBar = document.getElementById("nav");
-const navButton = document.querySelector("header").querySelector("button");
+const navButton = document.getElementById("navbutton");
 
 navButton.addEventListener('click', ()=> {
 	nav.classList.toggle("slide");
@@ -126,40 +126,40 @@ function convertValues(){
 	
 	if(inputTypeValue == "mm"){
 		mm = 1;
-		cm = 0.1;
-		m = 0.001;
-		km = 0.000001;
+		cm = 10;
+		m = 1000;
+		km = 1000000;
 	}
 	else if(inputTypeValue == "cm"){
-		mm = 10;
+		mm = 0.1;
 		cm = 1;
-		m = 0.01;
-		km = 0.00001;
+		m = 100;
+		km = 100000;
 	}
 	else if(inputTypeValue == "m"){
-		mm = 1000;
-		cm = 100;
+		mm = 0.001;
+		cm = 0.01;
 		m = 1;
-		km = 0.001;
+		km = 1000;
 	}
 	else{
-		mm = 1000000;
-		cm = 100000;
-		m = 1000;
+		mm = 0.000001;
+		cm = 0.00001;
+		m = 0.001;
 		km = 1;
 	}
 	
 	if(outputTypeValue == "mm"){
-		output = inputNumberValue * mm;
+		output = inputNumberValue / mm;
 	}
 	else if(outputTypeValue == "cm"){
-		output = inputNumberValue * cm;
+		output = inputNumberValue / cm;
 	}
 	else if(outputTypeValue == "m"){
-		output = inputNumberValue * m;
+		output = inputNumberValue / m;
 	}
 	else{
-		output = inputNumberValue * km;
+		output = inputNumberValue / km;
 	}
 	
 	outputNumber.value = output;
@@ -167,3 +167,137 @@ function convertValues(){
 }
 
 // METRICS STOP //
+// WEIGHTS START //
+
+const wSelects = document.getElementById("wghconv").querySelectorAll("select");
+let wInputType = document.getElementById("weightsIPT");
+let wOutputType = document.getElementById("weightsOPT");
+let wInputNumber = document.getElementById("wgharea");
+let wOutputNumber = document.getElementById("wghoutput");
+
+wInputNumber.addEventListener('keyup', convertWeightValues);
+
+for(i = 0; i < wSelects.length; i++){
+	wSelects[i].addEventListener('change', convertWeightValues);
+}
+
+function convertWeightValues(){
+	inputTypeValue = wInputType.value;
+	outputTypeValue = wOutputType.value;
+	inputNumberValue = wInputNumber.value;
+	
+	let ml, g, dag, l, kg, t, output;
+	
+	if(inputTypeValue == "g"){
+		g = 1;
+		ml = 1;
+		dag = 10;
+		l = 1000;
+		kg = 1000;
+		t = 1000000;
+	}
+	else if(inputTypeValue == "ml"){
+		g = 1;
+		ml = 1;
+		dag = 10;
+		l = 1000;
+		kg = 1000;
+		t = 1000000;
+	}
+	else if(inputTypeValue == "dag"){
+		g = 0.1;
+		ml = 0.1;
+		dag = 1;
+		l = 100;
+		kg = 100;
+		t = 100000;
+	}
+	else if(inputTypeValue == "l"){
+		g = 0.01;
+		ml = 0.01;
+		dag = 0.01;
+		l = 1;
+		kg = 1;
+		t = 1000;
+	}
+	else if(inputTypeValue == "kg"){
+		g = 0.01;
+		ml = 0.01;
+		dag = 0.01;
+		l = 1;
+		kg = 1;
+		t = 1000;
+	}
+	else{
+		g = 0.000001;
+		ml = 0.000001;
+		dag = 0.00001;
+		l = 0.001;
+		kg = 0.001;
+		t = 1;
+	}
+	
+	if(outputTypeValue == "g"){
+		output = inputNumberValue / g;
+	}
+	else if(outputTypeValue == "ml"){
+		output = inputNumberValue / ml;
+	}
+	else if(outputTypeValue == "dag"){
+		output = inputNumberValue / dag;
+	}
+	else if(outputTypeValue == "l"){
+		output = inputNumberValue / l;
+	}
+	else if(outputTypeValue == "kg"){
+		output = inputNumberValue / kg;
+	}
+	else{
+		output = inputNumberValue / t;
+	}
+	
+	wOutputNumber.value = output;
+	
+}
+
+// WEIGHTS STOP //
+// SPEEDS START //
+
+const sSelects = document.getElementById("spdconv").querySelectorAll("select");
+let sInputType = document.getElementById("speedsIPT");
+let sOutputType = document.getElementById("speedsOPT");
+let sInputNumber = document.getElementById("spdarea");
+let sOutputNumber = document.getElementById("spdoutput");
+
+sInputNumber.addEventListener('keyup', convertSpeedValues);
+
+for(i = 0; i < selects.length; i++){
+	sSelects[i].addEventListener('change', convertSpeedValues);
+}
+
+function convertSpeedValues(){
+	inputTypeValue = sInputType.value;
+	outputTypeValue = sOutputType.value;
+	inputNumberValue = sInputNumber.value;
+	
+	let mm, cm, m, km, output;
+	
+	if(inputTypeValue == "kmh"){
+		kmh = 1;
+		mph = 0.621371192;
+	}
+	else{
+		kmh = 1.609344;
+		mph = 1;
+	}
+	
+	if(outputTypeValue == "kmh"){
+		output = inputNumberValue * kmh;
+	}
+	else{
+		output = inputNumberValue * mph;
+	}
+	
+	sOutputNumber.value = output;
+	
+}
