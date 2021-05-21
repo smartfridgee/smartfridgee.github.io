@@ -1,0 +1,93 @@
+<!doctype HTML>
+<html lang="pl-PL">
+    <head>
+		<meta charset="utf-8">
+		<title>Hello!</title>
+		<meta name="author" content="Bastian Wierzchnicki">
+		<meta name="description" content="RandkaPicker">
+		<meta name="keywords" content="HTML, CSS, JavaScript, RickRoll">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-family: 'Raleway', sans-serif;
+			}
+			.hidden{
+				display: none;
+			}
+			.form{
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 95%;
+				text-align: center;
+			}
+			textarea{
+				height: 200px;
+				width: min(500px, 90%);
+				background-color: transparent;
+			}
+			.button{
+				padding: 8px;
+			}
+			.video{
+				pointer-events: none;
+				overflow: hidden;
+			}
+		</style>
+    </head>
+    <body>
+		<form class="form">
+			<br><br>
+			<h1>Forumluarz Szkolny</h1><br>
+			1. Imię: <input type="name" required><br><br>
+			2. Nazwisko: <input type="surname" required><br><br>
+			<div id="rick">
+			3. Klasa: 
+			<select required>
+				<option>2A</option>
+				<option>2B</option>
+				<option>2C</option>
+				<option>2E</option>
+				<option>2F</option>
+				<option>2G</option>
+			</select><br><br>
+			4. Jak oceniasz pracę na zajęciach zdalnych w tym roku szkolnym?<br><br>
+			<textarea required></textarea><br><br>
+			5. Co zmieniłbyś na zajęciach?<br><br>
+			<textarea required></textarea>
+			<br><br>
+			<input class="button" type="submit" required>
+			</div>
+		</form>
+		<div class="video">
+			<video id="video" class="hidden" preload="true" width="320" height="240">
+				<source src="video.mp4" type="video/mp4">
+			</video>
+		</div>
+		<script>
+			const vid = document.getElementById("video");
+			vid.width = window.innerWidth;
+			vid.height = window.innerHeight;
+		
+			const rick = document.getElementById("rick");
+			rick.addEventListener('click', playMe);
+			function playMe(){
+				setTimeout(function(){
+					
+					setInterval(function(){
+						let randomColor = Math.floor(Math.random()*16777215).toString(16);
+						document.body.style.backgroundColor = "#" + randomColor;
+						vid.classList.remove("hidden");
+					}, 1000)
+					vid.play();
+				}, 2000);
+			}
+		</script>
+    </body>
+</html>
