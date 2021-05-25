@@ -22,7 +22,7 @@ document.addEventListener('scroll', event => {
 	mainBackground.style.transform = "translateY("+value * 0.80 + "px)";
 })
 
-if(window.screen.availHeight < 800){
+/*if(window.screen.availHeight < 800){
 	let ending = document.getElementById('end');
 	end.classList.remove("hidden");
-}
+}*/
