@@ -262,8 +262,8 @@ h2{
 .image-phys{
 	height: 20em;
 	width: min(1000px, 95%);
-	background-image: url('../images/running.jpg');
-	background-position: center;
+	background-image: url('../images/fit.jpg');
+	background-position: bottom;
 	background-size: cover;
 	border-radius: 2em;
 	border: 0.2em solid black;
@@ -272,7 +272,7 @@ h2{
 .image-ghost{
 	height: 20em;
 	width: min(1000px, 95%);
-	background-image: url('../images/god.jpg');
+	background-image: url('../images/spirit.jpg');
 	background-position: center;
 	background-size: cover;
 	border-radius: 2em;
