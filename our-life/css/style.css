@@ -1,0 +1,382 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Comfortaa', cursive;
+}
+
+html{
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+body{
+	min-height: 100%;
+}
+
+h1{
+	font-size: 10rem;
+}
+
+h3{
+	font-size: 6rem;
+	text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #303030;
+}
+ 
+::-webkit-scrollbar-thumb {
+	background: #454545;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #3d3d3d;
+}
+
+#main i{
+	font-size: 3rem;
+	transition: font-size 0.5s
+}
+
+.split{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.icon-move{
+	font-size: 4rem !important;
+}
+
+.mover{
+	position: absolute;
+	z-index: -1;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.section-main{
+	height: 100vh;
+	width: 100%;
+}
+
+.inner-padding{
+	padding: 1.3em;
+}
+
+.main-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 1;
+}
+
+.section-content{
+	width: 100%;
+	z-index: 1;
+	box-sizing: border-box;
+}
+
+.container{
+	padding: 1em;
+	width: min(1000px, 95%);
+	margin: auto;
+}
+
+.border-left{
+	border-left: 0.2em solid black;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+}
+
+.border-right{
+	border-right: 0.2em solid black;
+	border-top-left-radius: 2em;
+	border-bottom-left-radius: 2em;
+}
+
+h2{
+	font-size: 4rem;
+}
+
+.image{
+	height: 20em;
+	width: min(1000px, 95%);
+	background-image: url('../images/people.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 2em;
+	border: 0.2em solid black;
+}
+
+.description{
+	font-size: 2rem;
+	width: 70%;
+	margin: auto;
+}
+
+.underline{
+	border-top: 0.25em solid black;
+	width: 50%;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.bkg-section{
+	background-color: #576feb;
+	background-image: url("../images/food.png");
+}
+
+.bkg-section-second{
+	background-color: #f21f1f;
+	background-image: url("../images/inspiration-geometry.png");
+}
+
+.bkg-main{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-image: url("../images/always-grey.png");
+	z-index: -2;
+}
+
+.smooth{
+	transition: transform 1s;
+}
+
+.bkg{
+	background-color: rgba(255,255,255,0.2);
+	-webkit-backdrop-filter: blur(1em);
+	backdrop-filter: blur(1em);
+}
+
+.cutter{
+	width: 100%;
+	height: 40em;
+	z-index: 3;
+}
+
+.cutter .hands{
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/hands.png");
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.image-second{
+	height: 20em;
+	width: min(1000px, 95%);
+	background-image: url('../images/lifestyle.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 2em;
+	border: 0.2em solid black;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.description-right{
+	font-size: 2rem;
+	width: 100%;
+	margin-left: auto;
+}
+
+.underline-right{
+	border-top: 0.25em solid black;
+	width: 65%;
+	margin-left: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.description-left{
+	font-size: 2rem;
+	width: 100%;
+	margin-right: auto;
+}
+
+.underline-left{
+	border-top: 0.25em solid black;
+	width: 65%;
+	margin-right: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.image-third{
+	height: 20em;
+	width: min(1000px, 95%);
+	background-image: url('../images/diagram.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 2em;
+	border: 0.2em solid black;
+}
+
+.bkg-section-phys{
+	background-color: #f8cc14;
+	background-image: url("../images/food.png");
+}
+
+.bkg-section-ghost{
+	background-color: #28a45c;
+	background-image: url("../images/inspiration-geometry.png");
+}
+
+.bkg-section-mental{
+	background-color: #983c8c;
+	background-image: url("../images/food.png");
+}
+
+.bkg-section-society{
+	background-color: #e87c24;
+	background-image: url("../images/inspiration-geometry.png");
+}
+
+.bkg-section-care{
+	background-color: #576feb;
+	background-image: url("../images/food.png");
+}
+
+.bkg-section-end{
+	background-color: white;
+	background-image: url("../images/always-grey.png");
+}
+
+.image-phys{
+	height: 20em;
+	width: min(1000px, 95%);
+	background-image: url('../images/running.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 2em;
+	border: 0.2em solid black;
+}
+
+.image-ghost{
+	height: 20em;
+	width: min(1000px, 95%);
+	background-image: url('../images/god.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 2em;
+	border: 0.2em solid black;
+}
+
+.image-mental{
+	height: 20em;
+	width: min(1000px, 95%);
+	background-image: url('../images/mozg.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 2em;
+	border: 0.2em solid black;
+}
+
+.image-society{
+	height: 20em;
+	width: min(1000px, 95%);
+	background-image: url('../images/society.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 2em;
+	border: 0.2em solid black;
+}
+
+.option-round{
+	font-size: 2rem;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	width: 80%;
+	margin: auto;
+	border-radius: 2em;
+}
+
+.red{
+	background-color: #ed3b3b;
+}
+
+.orange{
+	background-color: #f29741;
+}
+
+.yellow{
+	background-color: #fff952;
+}
+
+.green{
+	background-color: #42a145;
+}
+
+.lightblue{
+	background-color: lightblue;
+}
+
+.darkblue{
+	background-color: #363f63;
+}
+
+.purple{
+	background-color: #8558bf;
+}
+
+.end-description{
+	font-size: 2.5rem;
+	width: min(1000px, 95%);
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 500;
+}
+
+.up{
+	cursor: pointer;
+	font-size: 3em;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+	transition: 1s color;
+}
+
+a:hover{
+	color: #424242;
+	transition: 0.3s color;
+}
+
+.visible{
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.hidden{
+	opacity: 0;
+}
+
+.copyright{
+	padding-top: 0.55em;
+	padding-bottom: 0.4em;
+	width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ed3b3b;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	color: white;
+}
