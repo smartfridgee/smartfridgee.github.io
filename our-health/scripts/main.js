@@ -21,3 +21,8 @@ document.addEventListener('scroll', event => {
 	mainElement.style.transform = "translateY("+value * 0.70 + "px)";
 	mainBackground.style.transform = "translateY("+value * 0.80 + "px)";
 })
+
+if(window.screen.availHeight < 800){
+	let ending = document.getElementById('end');
+	end.classList.remove("hidden");
+}
