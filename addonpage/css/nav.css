@@ -22,7 +22,7 @@ nav{
 	padding-bottom: 1em;
 	background: rgba(0,0,0,0.8);
 	backdrop-filter: blur(0.4em);
-	--webkit-backdrop-filter: blur(0.4em);
+	-webkit-backdrop-filter: blur(0.4em);
 	z-index: 2;
 }
 
