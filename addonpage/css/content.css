@@ -1,0 +1,70 @@
+#content{
+	padding-top: 5em;
+	padding-bottom: 3em;
+	min-height: 100vh;
+	box-sizing: border-box;
+	font-family: 'Roboto Slab', serif;
+	color: white;
+	background: rgb(18,18,18);
+	background: linear-gradient(213deg, rgba(18,18,18,1) 0%, rgba(33,33,33,1) 100%);
+	user-select: none;
+	z-index: 1;
+}
+
+.content-container{
+	width: min(1500px, 95%);
+	margin: auto;
+	animation: fadeIn 1s;
+}
+
+h3{
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+p{
+	font-weight: 300;
+}
+
+.image{
+	margin-top: 2em;
+	width: 100%;
+	box-shadow: 0 0 1.5em -0.3em black;
+}
+
+.footer{
+	padding: 0.7em;
+	background: #080404;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+}
+
+@media (max-width: 1015px){
+	h3{
+		font-size: 4.5vw;
+	}
+	
+	p{
+		font-size: 2.5vw;
+	}
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.6);
+}
