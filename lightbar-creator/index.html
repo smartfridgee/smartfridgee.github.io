@@ -1,0 +1,81 @@
+<!doctype HTML>
+<html lang="pl-PL">
+    <head>
+		<meta charset="utf-8">
+		<title>Lightbar Creator</title>
+		<meta name="author" content="Bastian Wierzchnicki">
+		<meta name="description" content="Lightbar Creator">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon/favicon.ico">
+		<link rel="icon" href="images/favicon/favicon.ico">
+		<script src="https://kit.fontawesome.com/c678fbcbae.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="night">
+		<h1 class="glow">Welcome to Lightbar Creator</h1>
+		<div class="build">Dev - Whelen Justice 1.0</div>
+		<div class="copy">&copy smartfridgee 2021</div>
+		<div class="lightbar">
+			<div class="base">
+				<div class="left">
+					<div class="led corner"><div class="strobe"></div><div class="strobe"></div><div class="strobe"></div></div>
+					<div class="lamp"></div>
+					<div class="led basic"><div class="strobe"></div><div class="strobe"></div><div class="strobe"></div></div>
+					<div class="led basic"><div class="strobe"></div><div class="strobe"></div><div class="strobe"></div></div>
+					<div class="led basic"><div class="strobe"></div><div class="strobe"></div><div class="strobe"></div></div>
+				</div>
+				<div class="center">
+					<div class="led basic"><div class="strobe"></div><div class="strobe"></div><div class="strobe"></div></div>
+				</div>
+				<div class="right">
+					<div class="led basic"><div class="strobe"></div><div class="strobe"></div><div class="strobe"></div></div>
+					<div class="led basic"><div class="strobe"></div><div class="strobe"></div><div class="strobe"></div></div>
+					<div class="led basic"><div class="strobe"></div><div class="strobe"></div><div class="strobe"></div></div>
+					<div class="lamp"></div>
+					<div class="led corner"><div class="strobe"></div><div class="strobe"></div><div class="strobe"></div></div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="stand"></div>
+				<div class="left-leg"></div>
+				<div class="right-leg"></div>
+			</div>
+			<div class="buttons">
+				<button onclick="basicRB(0)">StandBy</button>
+				<button onclick="basicRB(1)">Code 1</button>
+				<button onclick="basicRB(2)">Code 2</button>
+				<button onclick="basicRB(3)">Code 3 v1</button>
+				<button onclick="basicRB(4)">Code 3 v2</button>
+				<button onclick="basicRB(5)">Aux Right</button>
+				<button onclick="basicRB(6)">Aux Left</button>
+				<button onclick="basicRB('off')">Pattern Off</button>
+				<button onclick="basicWhite()">Toggle White</button>
+				<button onclick="cycle()">Day/Night</button>
+			</div>
+		</div>
+		<div class="edit hidden">
+			<div class="activator"></div>
+			<div class="box">
+				<h2>You are editing the LED number <text id="ledNumber"></text></h2>
+				<br><br>
+				<h3>Select Color <text class="non-bold">(Selected Color: <b><text id="ledColor">Red</text></b>)</text></h3>
+				<br>
+				<div id="colors">
+					<button>Red</button><button>Blue</button><button>Amber</button><button>White</button><button>None</button>
+				</div>
+				<br><br>
+				<h3>Select Pattern <text class="non-bold">(Selected Pattern: <b><text id="ledPattern">Pattern 1</text></b>)</text></h3>
+				<br>
+				<div id="patterns">
+					<button value=1>Pattern 1</button><button value=2>Pattern 2</button><button value=3>Pattern 3</button><button value=0>None</button>
+				</div>
+				<br><br>
+				<button id="submit">Submit Changes</button>
+			</div>
+		</div>
+		<script src="scripts/script.js"></script>
+    </body>
+</html>
