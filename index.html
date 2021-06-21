@@ -2,51 +2,50 @@
 <html lang="pl-PL">
     <head>
 		<meta charset="utf-8">
-		<title>Hello!</title>
+		<title>Home - Hello!</title>
 		<meta name="author" content="Bastian Wierzchnicki, Julia Waszkiewicz">
-		<meta name="description" content="GithubMain">
+		<meta name="description" content="GithubHome">
 		<meta name="keywords" content="HTML, CSS, JavaScript, Github">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&display=swap" rel="stylesheet">
 		<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css">
+		<script src="https://kit.fontawesome.com/c678fbcbae.js" crossorigin="anonymous"></script>
     </head>
     <body>
-		<div class="gradient">
-			<img src="images/stars.png" id="stars" class="background-stars">
-			<div id="hello" class="hello">
-				<div class="title">Hello!</div>
-				<div class="under-title">smartfridgee here</div>
+		<nav>
+			<div class="container">
+				<a href="#welcome"><i id="up" class="far fa-arrow-alt-circle-up"></i></a>
+				<a href="#"><i class="fas fa-home"></i></a>
+				<a href="#ass"><i id="down" class="far fa-arrow-alt-circle-down"></i></a>
+				
 			</div>
-		</div>
-		<div class="fade"></div>
-		<div class="main">
-			<div class="left">
-				<div class="header-projects">My Projects</div>
-				<div class="info-projects">
-					<li><a href="https://smartfridgee.github.io/biedaint/">Biedaint</a></li>
-					<li><a href="https://smartfridgee.github.io/calculator/">Calculator</a></li>
-					<li><a href="https://smartfridgee.github.io/RandkaPicker/">RandkaPicker</a></li>
-					<li><a href="https://smartfridgee.github.io/MouseChasers/">MouseChasers</a></li>
-					<li><a href="https://smartfridgee.github.io/UltimateConventer/">UltimateConventer</a></li>
-				</div>
-			</div>
-			<div class="right">
-				<div class="header-about">About Me</div>
-				<div class="info-about">
-					Name: <text style="font-weight: 300">Yet Unknown</text>
-					<br>
-					What do I do?
-					<br>
-					<text style="font-weight: 300">Currently a student.
-					<br>
-					Recently doing some web stuff.</text>
-				</div>
-			</div>
-			<div class="footer">Copyright &copy 2021 smartfridgee</div>
-		</div>
+		</nav>
+		<section id="welcome" class="welcome">
+			<h1>hello</h1>
+		</section>
+		<section id="lc" class="project lc">
+			<h2>Lightbar Creator</h2>
+			<div class="description">An app that allows you to make your own, always dreamed of lightbar, based on Whelen Justice.</div>
+			<a href="https://smartfridgee.github.io/lightbar-creator/">Check it out <i class="fas fa-external-link-alt"></i></a>
+			<!--<img class="image" src="images/lc.jpg">-->
+		</section>
+		<section id="uc" class="project uc">
+			<h2>Ultimate Conventer</h2>
+			<div class="description">An app that allows you convert many, many things, such as text, measures and units.</div>
+			<a href="https://smartfridgee.github.io/UltimateConventer/">Check it out <i class="fas fa-external-link-alt"></i></a>
+		</section>
+		<section id="mc" class="project mc">
+			<h2>Mouse Chasers</h2>
+			<div class="description">A game where your cursor tries not to get eaten by some 'evil' characters.</div>
+			<a href="https://smartfridgee.github.io/MouseChasers/">Check it out <i class="fas fa-external-link-alt"></i></a>
+		</section>
+		<section id="end" class="project end">
+			<h1>end.</h1>
+		</section>
 		<script src="scripts/main.js"></script>
     </body>
 </html>
