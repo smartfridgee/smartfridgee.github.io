@@ -155,7 +155,7 @@ h2{
 .footer{
 	padding: 0.85em 0;
 	text-align: center;
-	background: #0b121c;
+	background: #0d0d0d;
 	overflow: hidden;
 	
 }
@@ -167,6 +167,7 @@ h2{
 	line-height: 0.65em;
 	animation: glow 5s linear infinite;
 	font-size: 0.9rem;
+	opacity: 0.9;
 }
 
 .trigger{
@@ -182,7 +183,7 @@ h2{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0b121c;
+  background: #0d0d0d;
 }
 
 /* Handle */
