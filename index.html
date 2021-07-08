@@ -16,11 +16,12 @@
 		<script src="https://kit.fontawesome.com/c678fbcbae.js" crossorigin="anonymous"></script>
     </head>
     <body>
+		<div class="trigger"></div>
 		<nav>
 			<div class="container">
-				<a href="#welcome"><i id="up" class="far fa-arrow-alt-circle-up"></i></a>
-				<a href="#"><i class="fas fa-home"></i></a>
-				<a href="#ass"><i id="down" class="far fa-arrow-alt-circle-down"></i></a>
+				<i class="far fa-arrow-alt-circle-up" onclick="changeSection(-1)"></i>
+				<i class="fas fa-home" onclick="changeSection(0)"></i>
+				<i class="far fa-arrow-alt-circle-down" onclick="changeSection(1)"></i>
 				
 			</div>
 		</nav>
@@ -43,9 +44,12 @@
 			<div class="description">A game where your cursor tries not to get eaten by some 'evil' characters.</div>
 			<a href="https://smartfridgee.github.io/MouseChasers/">Check it out <i class="fas fa-external-link-alt"></i></a>
 		</section>
-		<section id="end" class="project end">
+		<footer id="end" class="footer">
+			<div class="copyright">smartfridgee 2021</div>
+		</footer>
+		<!--<section id="end" class="project end">
 			<h1>end.</h1>
-		</section>
+		</section>-->
 		<script src="scripts/main.js"></script>
     </body>
 </html>

@@ -16,7 +16,8 @@ nav{
 	width: 100%;
 	height: 3em;
 	background: rgba(0,0,0,0.1);
-	backdrop-filter: blur(0.2em);
+	backdrop-filter: blur(0.4em);
+	-webkit-backdrop-filter: blur(0.4em);
 	transition: height 300ms;
 	overflow: hidden;
 	z-index: 99;
@@ -36,7 +37,7 @@ a{
 	text-decoration: none;
 }
 
-nav a{
+nav i{
 	color: #fff;
 	text-shadow: 0 0 10px #03bcf4,
 	0 0 20px #03bcf4,
@@ -46,6 +47,7 @@ nav a{
 	-webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0,0,0,0.1));
 	line-height: 0.65em;
 	text-transform:	lowercase;
+	cursor: pointer;
 }
 
 .hidden{
@@ -148,4 +150,44 @@ h2{
 
 .end{
 	background-color: #0a1113;
+}
+
+.footer{
+	padding: 0.85em 0;
+	text-align: center;
+	background: #0b121c;
+	overflow: hidden;
+	
+}
+
+.copyright{
+	color: #121924;
+	font-family: 'Cabin', sans-serif;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0,0,0,0.1));
+	line-height: 0.65em;
+	animation: glow 5s linear infinite;
+	font-size: 0.9rem;
+}
+
+.trigger{
+	height: 3em; width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+.
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0b121c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff2;
 }
