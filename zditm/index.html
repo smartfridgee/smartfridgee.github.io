@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+        body{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: 'Open Sans', sans-serif;
+            gap: 1em
+        }
+        h2{
+            font-weight: 700;
+        }
+        .container{
+            text-align: center;
+            border-radius: 1em;
+            overflow: hidden;
+            width: max-content;
+            width: min(30em, 100%);
+        }
+        iframe{
+            width: min(30em, 100%);
+            height: 18em;
+        }
+        .left{
+            background-color: #FF4500;
+        }
+        .right{
+            background-color: #0dcf5e;
+        }
+        @media (max-width: 1055px){
+            body{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container left">
+        <h2>Parkowa > Rodła</h2>
+        <iframe src="https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,13211" frameborder="0"></iframe>
+    </div>
+    <div class="container right">
+        <h2>Rodła > Parkowa</h2>
+        <iframe src="https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,11531" frameborder="0"></iframe>
+    </div>
+</body>
+</html>
