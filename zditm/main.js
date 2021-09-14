@@ -7,6 +7,11 @@
     let textRJ2 = document.getElementById('trj2');
 
 function loadSelected(){
+
+    if(localStorage.getItem("rj1") === null){
+        return 0;
+    }
+
     iframeRJ1.setAttribute('src', `https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,${localStorage.getItem("rj1")}`);
     iframeRJ2.setAttribute('src', `https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,${localStorage.getItem("rj2")}`);
 
