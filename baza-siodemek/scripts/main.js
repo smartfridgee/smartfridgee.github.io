@@ -11,6 +11,7 @@ const dataShuffle = (() => {
             let row = document.createElement('tr');
 
             if(i % 2 !== 0) { row.classList.add('contrasting'); }
+            else { row.classList.add('light'); }
 
             Object.values(array[i]).forEach(item => {
                 let data = document.createElement('td');

@@ -70,12 +70,12 @@ th{
     background: var(--light-header);
 }
 
-td{
+.light{
     background-color: #f5f5f5;
 }
 
 .contrasting{
-    filter: brightness(0.9);
+    background-color: #dbdada;
 }
 
 .table-area{
