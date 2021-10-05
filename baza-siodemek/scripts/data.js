@@ -163,7 +163,7 @@ const data = [
     {series: 'EU07', number: '145', type: '4E', lamps: 'ZEZ', paintjob: 'Biała Dama', panto: 'Nożycowe', railway: 'ECCO Rail'},
     {series: 'EU07', number: '166', type: '4E', lamps: 'ZEZ', paintjob: 'Biała Dama', panto: 'Nożycowe', railway: 'ECCO Rail'},
     {series: 'EU07', number: '167', type: '4E', lamps: 'ZEZ', paintjob: 'Biała Dama', panto: 'Nożycowe', railway: 'ECCO Rail'},
-    {series: 'EU07', number: '465', type: '303E', lamps: 'ZEZ', paintjob: 'Zielone Trapez', panto: 'Nożycowe', railway: 'ECCO Rail'}
+    {series: 'EU07', number: '465', type: '303E', lamps: 'ZEZ', paintjob: 'Zielone Trapez', panto: 'Nożycowe', railway: 'ECCO Rail'},
 
     //Tabor Rail
     {series: 'EU07', number: '064', type: '4E', lamps: 'TV', paintjob: 'Błękitne', panto: 'Nożycowe', railway: 'Tabor Rail'},
