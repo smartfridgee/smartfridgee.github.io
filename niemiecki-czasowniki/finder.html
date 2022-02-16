@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finder</title>
+    <script src="czasowniki.js"></script>
+    <style>
+        html {
+            height: 100vh;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .a {
+            display: flex;
+            flex-direction: column;
+            gap: 5em;
+        }
+
+        .b {
+            display: flex;
+            gap: 8em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <input oninput="search(event)" type="text" placeholder="szukaj">
+        <div class="b">
+            <div>
+                Infinitiv
+                <h2 id="inf"></h2>
+            </div>
+            <div>
+                Praeteritum
+                <h2 id="prat"></h2>
+            </div>
+            <div>
+                Partizip II
+                <h2 id="pzip"></h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        const inf = document.getElementById('inf')
+        const prat = document.getElementById('prat')
+        const pzip = document.getElementById('pzip')
+
+        function search(e) {
+            let srch = e.currentTarget.value;
+            console.log(e.currentTarget.value)
+            if(czasowniki.find(el => el.pl === srch) !== undefined) {
+                result = czasowniki.find(el => el.pl === srch);
+                inf.textContent = result.inf;
+                prat.textContent = result.prat;
+                pzip.textContent = result.pzip;
+            }
+            else {
+                inf.textContent = "";
+                prat.textContent = "";
+                pzip.textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>
