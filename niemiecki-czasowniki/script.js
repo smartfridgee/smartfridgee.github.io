@@ -16,7 +16,7 @@ function loadNewCzas() {
     count.textContent = `${+counter+1} / ${czasowniki.length}`;
     localStorage.setItem('progress', counter);
     counter++;
-    if(counter == czasowniki.length-1) { counter = 0; }
+    if(counter == czasowniki.length) { counter = 0; }
 }
 
 function checkIfCorrect() {
