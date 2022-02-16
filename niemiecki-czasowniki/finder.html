@@ -23,12 +23,19 @@
             display: flex;
             flex-direction: column;
             gap: 5em;
+            flex-wrap: wrap;
         }
 
         .b {
             display: flex;
             gap: 8em;
             text-align: center;
+        }
+
+        @media (max-width: 760px) {
+            .b {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
