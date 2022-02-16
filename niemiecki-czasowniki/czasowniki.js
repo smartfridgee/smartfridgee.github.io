@@ -31,7 +31,7 @@ const czasowniki = [
     {pl: "pływać", inf: "schwimmen", prat: "schwamm", pzip: "geschwommen (s.)"},
     {pl: "patrzeć", inf: "sehen", prat: "sah", pzip: "gesehen"},
     {pl: "być", inf: "sein", prat: "war", pzip: "gewesen (s.)"},
-    {pl: "siedzieć", inf: "sitzen", prat: "saß", pzip: "gesitzen"},
+    {pl: "siedzieć", inf: "sitzen", prat: "saß", pzip: "gesessen"},
     {pl: "mieć powinność", inf: "sollen", prat: "sollte", pzip: "gesollt"},
     {pl: "mówić", inf: "sprechen", prat: "sprach", pzip: "gesprochen"},
     {pl: "stać", inf: "stehen", prat: "stand", pzip: "gestanden"},
