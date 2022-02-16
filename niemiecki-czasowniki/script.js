@@ -53,7 +53,7 @@ function checkIfCorrect() {
 }
 
 window.addEventListener('keypress', (e)=> {
-    if(e.key === "enter") {
+    if(e.key === "Enter") {
         checkIfCorrect();
     }
 })
