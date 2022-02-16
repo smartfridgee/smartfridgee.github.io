@@ -1,5 +1,5 @@
 const czasowniki = [
-    {pl: "zaczynać się", inf: "beginnen", prat: "bagann", pzip: "begonnen"},
+    {pl: "zaczynać się", inf: "beginnen", prat: "begann", pzip: "begonnen"},
     {pl: "oferować", inf: "bieten", prat: "bot", pzip: "geboten"},
     {pl: "prosić", inf: "bitten", prat: "bat", pzip: "gebeten"},
     {pl: "zostawać", inf: "bleiben", prat: "blieb", pzip: "geblieben (s.)"},
