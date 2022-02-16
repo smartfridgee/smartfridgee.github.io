@@ -27,7 +27,7 @@ const czasowniki = [
     {pl: "wołać, dzwonić", inf: "rufen", prat: "rief", pzip: "gerufen"},
     {pl: "spać", inf: "schlafen", prat: "schlief", pzip: "geschlafen"},
     {pl: "ciąć, kroić", inf: "schneiden", prat: "schnitt", pzip: "geschnitten"},
-    {pl: "pisać", inf: "schreiben", prat: "schreib", pzip: "geschreiben"},
+    {pl: "pisać", inf: "schreiben", prat: "schrieb", pzip: "geschreiben"},
     {pl: "pływać", inf: "schwimmen", prat: "schwamm", pzip: "geschwommen (s.)"},
     {pl: "patrzeć", inf: "sehen", prat: "sah", pzip: "gesehen"},
     {pl: "być", inf: "sein", prat: "war", pzip: "gewesen (s.)"},
