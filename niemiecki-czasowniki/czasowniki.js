@@ -15,6 +15,7 @@ const czasowniki = [
     {pl: "iść", inf: "gehen", prat: "ging", pzip: "gegangen (s.)"},
     {pl: "wygrywać", inf: "gewinnen", prat: "gewann", pzip: "gewonnen"},
     {pl: "mieć", inf: "haben", prat: "hatte", pzip: "gehabt"},
+    {pl: "trzymać", inf: "halten", prat: "hielt", pzip: "gehalten"},
     {pl: "pomagać", inf: "hilfen", prat: "half", pzip: "geholfen"},
     {pl: "znać", inf: "kennen", prat: "kannte", pzip: "gekannt"},
     {pl: "przychodzić", inf: "kommen", prat: "kam", pzip: "gekommen (s.)"},
