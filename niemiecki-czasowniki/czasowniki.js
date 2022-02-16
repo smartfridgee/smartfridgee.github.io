@@ -18,7 +18,7 @@ const czasowniki = [
     {pl: "pomagać", inf: "hilfen", prat: "half", pzip: "geholfen"},
     {pl: "znać", inf: "kennen", prat: "kannte", pzip: "gekannt"},
     {pl: "przychodzić", inf: "kommen", prat: "kam", pzip: "gekommen (s.)"},
-    {pl: "móc, umieć", inf: "kennen", prat: "kannte", pzip: "gekonnt"},
+    {pl: "móc, umieć", inf: "könnte", prat: "konnte", pzip: "gekonnt"},
     {pl: "czytać", inf: "lesen", prat: "las", pzip: "gelesen"},
     {pl: "leżeć", inf: "liegen", prat: "lag", pzip: "gelegen"},
     {pl: "musieć", inf: "müssen", prat: "musste", pzip: "gemusst"},
