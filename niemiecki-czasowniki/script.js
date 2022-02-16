@@ -13,7 +13,8 @@ function loadNewCzas() {
     ans_inf = czasowniki[counter].inf;
     ans_prat = czasowniki[counter].prat;
     ans_pzip = czasowniki[counter].pzip;
-    count.textContent = `${counter+1} / ${czasowniki.length}`;
+    count.textContent = `${+counter+1} / ${czasowniki.length}`;
+    localStorage.setItem('progress', counter);
     counter++;
     if(counter == czasowniki.length-1) { counter = 0; }
 }
@@ -57,5 +58,9 @@ window.addEventListener('keypress', (e)=> {
         checkIfCorrect();
     }
 })
+
+if(localStorage.getItem('progress') !== null) {
+    counter = localStorage.getItem('progress');
+}
 
 window.onload = loadNewCzas;

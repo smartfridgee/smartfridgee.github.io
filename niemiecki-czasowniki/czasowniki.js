@@ -5,7 +5,7 @@ const czasowniki = [
     {pl: "zostawać", inf: "bleiben", prat: "blieb", pzip: "geblieben (s.)"},
     {pl: "przynośić", inf: "bringen", prat: "brachte", pzip: "gebracht"},
     {pl: "myśleć", inf: "denken", prat: "dachte", pzip: "gedacht"},
-    {pl: "mieć pozwolenie", inf: "durfen", prat: "durfte", pzip: "gedurft"},
+    {pl: "mieć pozwolenie", inf: "dürfen", prat: "durfte", pzip: "gedurft"},
     {pl: "jeść", inf: "essen", prat: "aß", pzip: "gegessen"},
     {pl: "jechać", inf: "fahren", prat: "fuhr", pzip: "gefahren (s.)"},
     {pl: "znajdować", inf: "finden", prat: "fand", pzip: "gefinden"},
