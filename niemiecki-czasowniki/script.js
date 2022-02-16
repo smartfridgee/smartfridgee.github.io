@@ -1,6 +1,6 @@
 const czaspl = document.getElementById('czasow');
 const count = document.getElementById('count');
-let counter = 1;
+let counter = 0;
 let ans_inf = "";
 let ans_prat = "";
 let ans_pzip = "";
@@ -13,9 +13,9 @@ function loadNewCzas() {
     ans_inf = czasowniki[counter].inf;
     ans_prat = czasowniki[counter].prat;
     ans_pzip = czasowniki[counter].pzip;
-    count.textContent = `${counter} / ${czasowniki.length}`;
+    count.textContent = `${counter+1} / ${czasowniki.length}`;
     counter++;
-    if(counter == czasowniki.length) { counter = 1; }
+    if(counter == czasowniki.length-1) { counter = 0; }
 }
 
 function checkIfCorrect() {
