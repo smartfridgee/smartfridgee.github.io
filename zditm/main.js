@@ -49,4 +49,12 @@ function deleteStop() {
     loadStops();
 }
 
+function clearData() {
+    localStorage.removeItem("rj1");
+    localStorage.removeItem("rj2");
+    localStorage.removeItem("stops");
+    window.localStorage.clear();
+    window.location.reload(true);
+}
+
 window.onload = loadStops;
