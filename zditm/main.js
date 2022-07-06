@@ -1,42 +1,52 @@
-//https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,13211
+let stop_list = [
+    { "id": "11535", "name": "Plac Rodła 86" },
+    { "id": "11542", "name": "Plac Rodła 5/11" },
+];
 
-    let iframeRJ1 = document.getElementById('rj1');
-    let iframeRJ2 = document.getElementById('rj2');
+const link = "https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,";
 
-    let textRJ1 = document.getElementById('trj1');
-    let textRJ2 = document.getElementById('trj2');
-
-function loadSelected(){
-
-    if(localStorage.getItem("rj1") === null){
-        return 0;
-    }
-
-    iframeRJ1.setAttribute('src', `https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,${localStorage.getItem("rj1")}`);
-    iframeRJ2.setAttribute('src', `https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,${localStorage.getItem("rj2")}`);
-
-    textRJ1.innerText = localStorage.getItem("trj1");
-    textRJ2.innerText = localStorage.getItem("trj2");
+function loadStops() {
+    let selects = document.querySelectorAll('select');
+    selects.forEach((el, i) => {
+        if(localStorage.getItem(`rj${i+1}`)) {
+            let stop = document.getElementById(`rj${i+1}`);
+            let number = localStorage.getItem(`rj${i+1}`);
+            stop.src = link + number
+            stop.dataset.stop = number;
+        }
+        if(localStorage.getItem("stops")) {
+            stop_list = JSON.parse(localStorage.getItem("stops"));
+        }
+        el.innerHTML = "";
+        stop_list.forEach(stop => {
+            let option = document.createElement('option');
+            option.value = stop.id;
+            option.textContent = `${stop.name} (${stop.id})`;
+            
+            if(stop.id == document.getElementById(`rj${i+1}`).dataset.stop) { option.selected = true };
+            el.appendChild(option);
+        })
+    })
 }
 
-function changeStops(){
-
-    let selectedRJ1 = document.getElementById('slrj1').value;
-    let selectedRJ2 = document.getElementById('slrj2').value;
-
-    let selectedRJ1Text = document.getElementById('slrj1').options[document.getElementById('slrj1').selectedIndex].text
-    let selectedRJ2Text = document.getElementById('slrj2').options[document.getElementById('slrj2').selectedIndex].text
-
-    iframeRJ1.setAttribute('src', `https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,${selectedRJ1}`);
-    iframeRJ2.setAttribute('src', `https://www.zditm.szczecin.pl/pl/pasazer/rozklady-jazdy,tablica,slupek,${selectedRJ2}`);
-
-    textRJ1.innerText = selectedRJ1Text;
-    textRJ2.innerText = selectedRJ2Text;
-
-    localStorage.setItem("rj1", selectedRJ1);
-    localStorage.setItem("rj2", selectedRJ2);
-    localStorage.setItem("trj1", selectedRJ1Text);
-    localStorage.setItem("trj2", selectedRJ2Text);
+function changeStop(event, num) {
+    document.getElementById(`rj${num}`).src = link + event.currentTarget.value;
+    localStorage.setItem(`rj${num}`, event.currentTarget.value);
 }
 
-window.onload = loadSelected();
+function addNewStop() {
+    let n_num = document.getElementById('new_number').value;
+    let n_name = document.getElementById('new_name').value;
+    stop_list.push({ "id": n_num, "name": n_name });
+    localStorage.setItem("stops", JSON.stringify(stop_list));
+    loadStops();
+}
+
+function deleteStop() {
+    let d_num = document.getElementById('del_number').value;
+    stop_list.splice(stop_list.indexOf(stop_list.find(el => el.id == d_num)), 1);
+    localStorage.setItem("stops", JSON.stringify(stop_list));
+    loadStops();
+}
+
+window.onload = loadStops;
