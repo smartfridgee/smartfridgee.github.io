@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smartfridgee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <p>smartfridgee in progress<span id="dots">.</span></p>
+    <script>
+        const dots = document.getElementById('dots');
+        setInterval(() => {
+            if(dots.innerText.length == 3) dots.innerText = '';
+            dots.innerText += '.';
+        }, 600);
+
+        const cursor = document.querySelector('.cursor');
+        window.addEventListener('mousemove', (e)=> {
+            cursor.style.setProperty('--left', e.clientX-5 + "px");
+            cursor.style.setProperty('--top', e.clientY-5 + "px");
+        })
+    </script>
+</body>
+</html>
